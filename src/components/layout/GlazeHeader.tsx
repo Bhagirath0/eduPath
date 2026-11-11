@@ -1,0 +1,160 @@
+import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
+const GlazeHeader: React.FC = () => {
+  const [isCompact, setIsCompact] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsCompact(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header
+      className="fixed z-30 pointer-events-none flex items-start justify-between transition-all duration-300"
+      style={{
+        top: 'max(12px, calc(24 * var(--u)))',
+        left: 'max(12px, calc(90 * var(--u)))',
+        right: 'max(12px, calc(90 * var(--u)))',
+      }}
+    >
+      {/* Left Pill */}
+      <div
+        className="pointer-events-auto flex items-center justify-between overflow-hidden shadow-sm backdrop-blur-[14px] transition-all"
+        style={{
+          height: 'max(46px, calc(64 * var(--u)))',
+          borderRadius: 'max(12px, calc(16 * var(--u)))',
+          backgroundColor: 'rgba(234, 239, 246, 0.82)',
+          paddingLeft: 'max(14px, calc(22 * var(--u)))',
+          paddingRight: 'max(14px, calc(22 * var(--u)))',
+          width: isCompact
+            ? 'max(128px, calc(250 * var(--u)))'
+            : 'max(128px, min(100%, calc(708 * var(--u))))',
+          transition: 'width 0.6s cubic-bezier(0.7, 0, 0.2, 1), background-color 0.2s',
+          border: '1px solid rgba(255, 255, 255, 0.6)',
+        }}
+      >
+        {/* Logo */}
+        <Link
+          to="/"
+          className="flex items-center gap-1 select-none shrink-0 group"
+          aria-label="EduPath home"
+        >
+          <span
+            className="font-kaushan text-text-primary leading-none transition-transform group-hover:scale-105"
+            style={{
+              fontSize: 'max(20px, calc(31 * var(--u)))',
+              transform: 'skewX(-6deg)',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            EduPath
+          </span>
+          <span
+            className="rounded-full bg-text-primary shrink-0"
+            style={{
+              width: 'max(3px, calc(4 * var(--u)))',
+              height: 'max(3px, calc(4 * var(--u)))',
+              marginLeft: 'calc(3 * var(--u))',
+              marginBottom: '2px',
+            }}
+          />
+        </Link>
+
+        {/* Nav Links */}
+        <nav
+          className="hidden md:flex items-center transition-opacity duration-300"
+          style={{
+            marginLeft: 'calc(44 * var(--u))',
+            gap: 'calc(24 * var(--u))',
+            opacity: isCompact ? 0 : 1,
+            pointerEvents: isCompact ? 'none' : 'auto',
+          }}
+        >
+          {[
+            { label: 'Courses', to: '/courses' },
+            { label: 'Internships', to: '/internships' },
+            { label: 'How It Works', to: '/#how-it-works' },
+            { label: 'Dashboard', to: '/dashboard' },
+            { label: 'Verify', to: '/verify-certificate' },
+          ].map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className="font-inter-tight text-[#1e2128] hover:opacity-55 transition-opacity text-sm whitespace-nowrap"
+              style={{
+                fontSize: 'calc(17 * var(--u))',
+              }}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* More Button on far right */}
+        <button
+          type="button"
+          aria-label="More navigation options"
+          className="flex items-center justify-center shrink-0 hover:opacity-70 transition-opacity ml-auto"
+          style={{
+            width: 'max(22px, calc(30 * var(--u)))',
+            height: 'max(22px, calc(30 * var(--u)))',
+          }}
+        >
+          <svg
+            viewBox="0 0 4 16"
+            className="w-auto"
+            style={{
+              height: 'max(12px, calc(16 * var(--u)))',
+              fill: 'currentColor',
+            }}
+          >
+            <circle cx="2" cy="2" r="2" />
+            <circle cx="2" cy="14" r="2" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Right Pill */}
+      <div
+        className="pointer-events-auto flex items-center shadow-sm backdrop-blur-[14px] shrink-0"
+        style={{
+          height: 'max(46px, calc(60 * var(--u)))',
+          marginTop: 'calc(2 * var(--u))',
+          borderRadius: 'max(12px, calc(16 * var(--u)))',
+          backgroundColor: 'rgba(234, 239, 246, 0.82)',
+          paddingLeft: 'max(14px, calc(22 * var(--u)))',
+          paddingRight: 'max(8px, calc(13 * var(--u)))',
+          gap: 'max(10px, calc(18 * var(--u)))',
+          border: '1px solid rgba(255, 255, 255, 0.6)',
+        }}
+      >
+        <Link
+          to="/dashboard"
+          className="font-inter-tight text-[#1e2128] hover:opacity-70 transition-opacity font-medium"
+          style={{ fontSize: 'max(13px, calc(17 * var(--u)))' }}
+        >
+          Login
+        </Link>
+
+        <Link
+          to="/internships"
+          className="font-inter-tight font-medium text-[#fafafa] bg-[#16191f] hover:bg-[#2b3140] transition-colors flex items-center justify-center"
+          style={{
+            borderRadius: 'max(8px, calc(9 * var(--u)))',
+            padding: 'max(6px, calc(8 * var(--u))) max(12px, calc(16 * var(--u)))',
+            fontSize: 'max(13px, calc(16 * var(--u)))',
+          }}
+        >
+          Explore Internships
+        </Link>
+      </div>
+    </header>
+  );
+};
+
+export default GlazeHeader;
+

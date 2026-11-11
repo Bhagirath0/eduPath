@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --u: calc(100vw / 1536);
+  --ink: #111418;
+  --bg-page: #f4f7fb;
+  --pill-bg: rgba(234, 239, 246, 0.82);
+  --timeline-panel: #12151b;
+}
+
+@media (max-width: 820px) {
+  :root {
+    --u: calc(100vw / 390);
+  }
+}
+
+.hero-scope {
+  --u: min(calc(100vw / 1536), calc(100vh / 864));
+}
+@media (max-width: 820px) {
+  .hero-scope {
+    --u: calc(100vw / 390);
+  }
+}
+
+.font-inter-tight { font-family: 'Inter Tight', system-ui, -apple-system, sans-serif; }
+.font-kaushan { font-family: 'Kaushan Script', cursive; }
+.font-unbounded { font-family: 'Unbounded', sans-serif; }
+.font-syncopate { font-family: 'Syncopate', sans-serif; }
+.font-michroma { font-family: 'Michroma', sans-serif; }
+.font-archivo { font-family: 'Archivo Black', sans-serif; }
+
+/* ── Global Base Styles ──────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-text-primary bg-surface-primary;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus visible for keyboard nav */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-blue rounded-sm;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-border-strong rounded-pill; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-text-muted; }
+}
+
+/* ── Component Utilities ─────────────────────────────────────── */
+@layer components {
+  /* Container */
+  .container-content {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Section label (small eyebrow text) */
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-brand-blue;
+  }
+
+  /* Prose content in learning pages */
+  .prose-content {
+    @apply text-text-primary leading-relaxed;
+  }
+  .prose-content h1 { @apply text-display-sm font-bold mb-6 mt-10; }
+  .prose-content h2 { @apply text-2xl font-semibold mb-4 mt-8; }
+  .prose-content h3 { @apply text-xl font-semibold mb-3 mt-6; }
+  .prose-content p  { @apply mb-4 text-text-secondary; }
+  .prose-content ul { @apply list-disc pl-6 mb-4 space-y-1 text-text-secondary; }
+  .prose-content ol { @apply list-decimal pl-6 mb-4 space-y-1 text-text-secondary; }
+  .prose-content code { @apply font-mono text-sm bg-surface-tertiary text-text-primary px-1.5 py-0.5 rounded; }
+  .prose-content pre { @apply font-mono text-sm bg-dark-800 text-white p-4 rounded-card overflow-x-auto mb-4; }
+
+  /* Code block */
+  .code-block {
+    @apply bg-dark-DEFAULT rounded-card overflow-hidden;
+  }
+  .code-block-header {
+    @apply flex items-center justify-between px-4 py-3 bg-dark-800 border-b border-dark-700;
+  }
+  .code-block-body {
+    @apply font-mono text-sm text-gray-100 p-4 overflow-x-auto leading-relaxed;
+  }
+
+  /* Status badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-pill;
+  }
+  .badge-blue    { @apply bg-brand-blueLight text-brand-blue; }
+  .badge-green   { @apply bg-status-successLight text-status-success; }
+  .badge-yellow  { @apply bg-status-warningLight text-status-warning; }
+  .badge-red     { @apply bg-status-errorLight text-status-error; }
+  .badge-gray    { @apply bg-surface-tertiary text-text-secondary; }
+  .badge-dark    { @apply bg-dark-DEFAULT text-white; }
+}
+

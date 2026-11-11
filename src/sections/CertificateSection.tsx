@@ -1,0 +1,144 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Award, CheckCircle2, ShieldCheck, ArrowRight, Download } from 'lucide-react';
+import Button from '@/components/ui/Button';
+
+const CertificateSection: React.FC = () => {
+  return (
+    <section className="section-padding bg-surface-primary border-t border-border">
+      <div className="container-content">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column: Information */}
+          <div className="lg:col-span-6 space-y-6">
+            <span className="section-label">CREDENTIALS</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+              Certificates Backed by Verified Completion
+            </h2>
+            <p className="text-text-secondary text-base md:text-lg leading-relaxed">
+              We do not issue participation certificates just for clicking through videos. Each EduPath certificate is earned after completing structured assignments, building practical projects, and meeting rigorous evaluation criteria.
+            </p>
+
+            <div className="space-y-4 pt-2">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-status-successLight flex items-center justify-center shrink-0 mt-0.5">
+                  <ShieldCheck className="w-4 h-4 text-status-success" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-text-primary">Unique Verifiable ID</h3>
+                  <p className="text-xs text-text-secondary">
+                    Every certificate includes a tamper-resistant verification ID that employers or colleges can verify publicly.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4 text-brand-blue" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-text-primary">Objective Evaluation</h3>
+                  <p className="text-xs text-text-secondary">
+                    Awarded after project submissions, code quality review, and module milestone evaluations.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center shrink-0 mt-0.5">
+                  <Award className="w-4 h-4 text-purple-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-text-primary">Shareable Digital Portfolio</h3>
+                  <p className="text-xs text-text-secondary">
+                    Export high-resolution PDF credentials and showcase your verified technical projects on LinkedIn.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <Link to="/verify-certificate">
+                <Button variant="primary">
+                  Verify a Certificate
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/courses">
+                <Button variant="secondary">Browse Courses</Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Visual Mockup */}
+          <div className="lg:col-span-6">
+            <div className="relative mx-auto max-w-lg">
+              {/* Decorative background glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-2xl filter blur-xl opacity-70 -z-10" />
+
+              {/* Certificate Card */}
+              <div className="bg-white rounded-xl border-2 border-border shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+                {/* Certificate top accent */}
+                <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-brand-blue via-indigo-600 to-brand-blue" />
+
+                {/* Header */}
+                <div className="flex items-center justify-between pb-6 border-b border-border">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-sm bg-brand-blue" />
+                    <span className="font-bold text-base text-text-primary">EduPath</span>
+                  </div>
+                  <span className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 rounded bg-surface-secondary border border-border text-text-secondary">
+                    Sample Certificate
+                  </span>
+                </div>
+
+                {/* Certificate Body */}
+                <div className="text-center py-6">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-brand-blue mb-1">
+                    Certificate of Competency
+                  </p>
+                  <p className="text-xs text-text-secondary mb-4">This certifies that</p>
+                  <h4 className="text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-2">
+                    Rahul Sharma
+                  </h4>
+                  <p className="text-xs text-text-secondary max-w-xs mx-auto leading-relaxed mb-4">
+                    has successfully completed the coursework, practical assignments, and evaluated capstone project in
+                  </p>
+                  <div className="inline-block px-4 py-2 rounded-lg bg-surface-secondary border border-border">
+                    <span className="font-semibold text-sm text-text-primary">
+                      Java Fundamentals & Object-Oriented Design
+                    </span>
+                  </div>
+                </div>
+
+                {/* Verification Footer */}
+                <div className="pt-4 border-t border-border flex items-center justify-between text-left text-xs text-text-secondary">
+                  <div>
+                    <span className="block text-[10px] text-text-muted uppercase tracking-wider">Credential ID</span>
+                    <span className="font-mono font-medium text-text-primary">EP-2024-JV-9821</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="block text-[10px] text-text-muted uppercase tracking-wider">Status</span>
+                    <span className="inline-flex items-center gap-1 font-medium text-status-success">
+                      <span className="w-1.5 h-1.5 rounded-full bg-status-success" />
+                      Verified
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Float note */}
+              <div className="mt-4 text-center">
+                <span className="text-xs text-text-muted inline-flex items-center gap-1.5">
+                  <Download className="w-3.5 h-3.5" />
+                  Free PDF download with cryptographically signed verification URL
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CertificateSection;
