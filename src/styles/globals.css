@@ -28,21 +28,21 @@
 
 html.light, body.light, [data-theme="light"] {
   --ink: #111418;
-  --bg-page: #f4f7fb;
-  --pill-bg: rgba(234, 239, 246, 0.88);
+  --bg-page: #f8fafc;
+  --pill-bg: rgba(255, 255, 255, 0.88);
   --pill-border: rgba(0, 0, 0, 0.08);
   --pill-text: #475569;
   --pill-text-hover: #0f172a;
   --timeline-panel: #e2e8f0;
 
   --surface-primary: #ffffff;
-  --surface-secondary: #f8fafc;
-  --surface-tertiary: #f1f5f9;
+  --surface-secondary: #f1f5f9;
+  --surface-tertiary: #e2e8f0;
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-muted: #64748b;
   --text-inverse: #ffffff;
-  --border-color: rgba(0, 0, 0, 0.08);
+  --border-color: rgba(0, 0, 0, 0.09);
   --border-strong: rgba(0, 0, 0, 0.16);
   --hero-grad: linear-gradient(180deg, #dbe3ee 0%, #eef2f8 62%, #f4f7fb 100%);
   --card-bg: #ffffff;
@@ -174,13 +174,13 @@ html.dark, body.dark, [data-theme="dark"] {
 
   /* Status badge */
   .badge {
-    @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-pill;
+    @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-pill transition-colors;
   }
-  .badge-blue    { @apply bg-blue-500/15 text-blue-400 border border-blue-500/20; }
-  .badge-green   { @apply bg-emerald-500/15 text-emerald-400 border border-emerald-500/20; }
-  .badge-yellow  { @apply bg-amber-500/15 text-amber-400 border border-amber-500/20; }
-  .badge-red     { @apply bg-rose-500/15 text-rose-400 border border-rose-500/20; }
-  .badge-gray    { @apply bg-white/5 text-slate-300 border border-white/10; }
-  .badge-dark    { @apply bg-black/60 text-white border border-white/15; }
+  .badge-blue    { @apply bg-blue-500/10 dark:bg-blue-500/15 text-blue-700 dark:text-blue-400 border border-blue-500/20; }
+  .badge-green   { @apply bg-emerald-500/10 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20; }
+  .badge-yellow  { @apply bg-amber-500/10 dark:bg-amber-500/15 text-amber-800 dark:text-amber-400 border border-amber-500/20; }
+  .badge-red     { @apply bg-rose-500/10 dark:bg-rose-500/15 text-rose-700 dark:text-rose-400 border border-rose-500/20; }
+  .badge-gray    { @apply bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10; }
+  .badge-dark    { @apply bg-slate-900 dark:bg-black/60 text-white border border-slate-700 dark:border-white/15; }
 }
 

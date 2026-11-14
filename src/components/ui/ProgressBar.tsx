@@ -49,7 +49,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
       )}
 
       <div
-        className={`w-full rounded-full bg-surface-secondary overflow-hidden ${heightMap[size]}`}
+        className={`w-full rounded-full bg-slate-200 dark:bg-surface-secondary overflow-hidden ${heightMap[size]}`}
         role="progressbar"
         aria-valuenow={clamped}
         aria-valuemin={0}

@@ -125,7 +125,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={idx} className={`shrink-0 leading-none ${item.fontClass} hover:text-white transition-colors`}>
+              <li key={idx} className={`shrink-0 leading-none ${item.fontClass} hover:text-slate-900 dark:hover:text-white transition-colors`}>
                 {item.text}
               </li>
             ))}
@@ -142,7 +142,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass} hover:text-white transition-colors`}>
+              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass} hover:text-slate-900 dark:hover:text-white transition-colors`}>
                 {item.text}
               </li>
             ))}

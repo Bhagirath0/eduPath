@@ -38,10 +38,10 @@ const Input: React.FC<InputProps> = ({
   const inputId = id ?? (label ? label.toLowerCase().replace(/\s+/g, '-') : undefined);
 
   const baseInput =
-    'w-full border rounded-lg px-3 py-2.5 text-sm text-text-primary bg-white placeholder:text-text-secondary transition-colors duration-150 focus:outline-none focus:ring-2 disabled:bg-surface-secondary disabled:cursor-not-allowed';
+    'w-full border rounded-lg px-3 py-2.5 text-sm text-text-primary bg-surface-primary placeholder:text-text-muted transition-colors duration-150 focus:outline-none focus:ring-2 disabled:bg-surface-secondary disabled:cursor-not-allowed';
 
-  const normalBorder = 'border-border focus:border-brand-blue focus:ring-brand-blueLight';
-  const errorBorder = 'border-red-400 focus:border-red-400 focus:ring-red-100 text-red-700';
+  const normalBorder = 'border-border focus:border-brand-blue focus:ring-brand-blue/20';
+  const errorBorder = 'border-red-400 focus:border-red-400 focus:ring-red-400/20 text-red-600 dark:text-red-400';
 
   const inputClasses = [
     baseInput,
