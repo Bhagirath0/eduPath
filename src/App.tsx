@@ -16,6 +16,7 @@ const AssignmentsPage       = lazy(() => import('@/pages/AssignmentsPage'));
 const ProjectsPage          = lazy(() => import('@/pages/ProjectsPage'));
 const CertificatesPage      = lazy(() => import('@/pages/CertificatesPage'));
 const VerifyCertificatePage = lazy(() => import('@/pages/VerifyCertificatePage'));
+const LoginPage             = lazy(() => import('@/pages/LoginPage'));
 const NotFoundPage          = lazy(() => import('@/pages/NotFoundPage'));
 
 // ── Page loading fallback ─────────────────────────────────────────
@@ -43,6 +44,8 @@ export default function App() {
             <Route path="/internships"           element={<InternshipsPage />} />
             <Route path="/internships/:slug"     element={<InternshipDetailPage />} />
             <Route path="/verify-certificate"    element={<VerifyCertificatePage />} />
+            <Route path="/login"                 element={<LoginPage />} />
+            <Route path="/register"              element={<LoginPage />} />
 
             {/* ── Student Dashboard ───────────────────────────────── */}
             <Route path="/dashboard"             element={<DashboardPage />} />

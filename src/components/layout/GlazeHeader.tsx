@@ -140,7 +140,7 @@ const GlazeHeader: React.FC = () => {
         <ThemeToggle />
 
         <Link
-          to="/dashboard"
+          to="/login"
           className="font-inter-tight transition-colors font-medium opacity-90 hover:opacity-100"
           style={{
             fontSize: 'max(13px, calc(17 * var(--u)))',
