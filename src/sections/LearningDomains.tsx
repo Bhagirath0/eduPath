@@ -68,12 +68,12 @@ const DOMAINS = [
 
 export default function LearningDomains() {
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#12151d] transition-colors duration-200">
+    <section className="section-padding bg-surface-secondary transition-colors duration-200">
       <div className="container-content">
         {/* Header */}
         <div className="text-center mb-12">
           <span className="section-label">LEARNING PATHS</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mt-2 tracking-tight">
             Six Domains, One Platform
           </h2>
         </div>
@@ -86,11 +86,11 @@ export default function LearningDomains() {
               <Link
                 key={domain.name}
                 to={`/courses?domain=${domain.param}`}
-                className="group bg-white dark:bg-[#161a24] rounded-card border border-slate-200 dark:border-white/10 hover:border-brand-blue/50 hover:bg-slate-50 dark:hover:bg-[#1a202c] hover:scale-[1.02] transition-all duration-200 p-6 flex flex-col gap-4 shadow-card"
+                className="group bg-surface-primary rounded-card border border-border hover:border-brand-blue/50 hover:bg-surface-secondary hover:scale-[1.02] transition-all duration-200 p-6 flex flex-col gap-4 shadow-card"
               >
                 {/* Icon */}
                 <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center border border-slate-200 dark:border-white/10"
+                  className="w-11 h-11 rounded-xl flex items-center justify-center border border-border"
                   style={{ backgroundColor: `${domain.color}20` }}
                 >
                   <Icon size={22} style={{ color: domain.color }} />
@@ -98,22 +98,22 @@ export default function LearningDomains() {
 
                 {/* Text */}
                 <div className="flex-1">
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1 group-hover:text-brand-blue transition-colors">
+                  <h3 className="font-semibold text-text-primary mb-1 group-hover:text-brand-blue transition-colors">
                     {domain.name}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-snug">
+                  <p className="text-text-secondary text-sm leading-snug">
                     {domain.description}
                   </p>
                 </div>
 
                 {/* Footer */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                  <span className="text-xs text-text-muted">
                     {domain.courses} courses
                   </span>
                   <ArrowRight
                     size={16}
-                    className="text-slate-500 dark:text-slate-400 group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200"
+                    className="text-text-muted group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200"
                   />
                 </div>
               </Link>

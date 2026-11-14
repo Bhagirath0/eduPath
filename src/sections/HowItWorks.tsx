@@ -38,12 +38,12 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-white dark:bg-[#0b0d11] transition-colors duration-200">
+    <section id="how-it-works" className="section-padding bg-surface-primary transition-colors duration-200">
       <div className="container-content">
         {/* Header */}
         <div className="text-center mb-14">
           <span className="section-label">THE PROCESS</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mt-2 tracking-tight">
             Your Learning Journey
           </h2>
         </div>
@@ -51,7 +51,7 @@ export default function HowItWorks() {
         {/* Timeline */}
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-200 dark:bg-white/10 hidden md:block" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border hidden md:block" />
 
           <div className="flex flex-col gap-10">
             {STEPS.map((step, i) => {
@@ -71,14 +71,14 @@ export default function HowItWorks() {
                         : 'md:text-left md:pl-10'
                     }`}
                   >
-                    <h3 className="font-semibold text-slate-900 dark:text-white text-base md:text-lg mb-1">
+                    <h3 className="font-semibold text-text-primary text-base md:text-lg mb-1">
                       {step.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm">{step.desc}</p>
+                    <p className="text-text-secondary text-sm">{step.desc}</p>
                   </div>
 
                   {/* Circle */}
-                  <div className="relative z-10 flex-shrink-0 w-11 h-11 rounded-full border-2 border-brand-blue bg-white dark:bg-[#12151d] flex items-center justify-center shadow-lg shadow-brand-blue/20">
+                  <div className="relative z-10 flex-shrink-0 w-11 h-11 rounded-full border-2 border-brand-blue bg-surface-primary flex items-center justify-center shadow-lg shadow-brand-blue/20">
                     <span className="text-brand-blue font-bold text-xs">
                       {step.num}
                     </span>
@@ -93,8 +93,8 @@ export default function HowItWorks() {
         </div>
 
         {/* NOTE */}
-        <div className="mt-14 max-w-2xl mx-auto border border-slate-200 dark:border-white/10 rounded-xl p-5 bg-slate-50 dark:bg-[#12151d] text-sm text-slate-600 dark:text-slate-400 text-center">
-          <span className="font-semibold text-slate-900 dark:text-white">Note: </span>
+        <div className="mt-14 max-w-2xl mx-auto border border-border rounded-xl p-5 bg-surface-secondary text-sm text-text-secondary text-center">
+          <span className="font-semibold text-text-primary">Note: </span>
           Completing a course does not automatically guarantee an internship
           certificate. Certificates are issued based on actual completion and
           evaluation.

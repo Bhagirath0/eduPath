@@ -69,19 +69,19 @@ const faqItems = [
 
 const FAQSection: React.FC = () => {
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#12151d] border-t border-slate-200 dark:border-white/10 transition-colors duration-200" id="faq">
+    <section className="section-padding bg-surface-secondary border-t border-border transition-colors duration-200" id="faq">
       <div className="container-content max-w-4xl">
         <div className="text-center mb-12">
           <span className="section-label">FAQ</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight mt-2 mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-base max-w-xl mx-auto">
+          <p className="text-text-secondary text-base max-w-xl mx-auto">
             Clear, honest answers about our learning tracks, internships, evaluation model, and certification.
           </p>
         </div>
 
-        <div className="bg-white dark:bg-[#161a24] rounded-xl border border-slate-200 dark:border-white/10 p-6 sm:p-8 shadow-card">
+        <div className="bg-surface-primary rounded-xl border border-border p-6 sm:p-8 shadow-card">
           <Accordion items={faqItems} allowMultiple />
         </div>
       </div>

@@ -82,7 +82,7 @@ const GlazeLogoTicker: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full overflow-hidden bg-white dark:bg-[#0b0d11] select-none border-b border-slate-200 dark:border-white/10 transition-colors duration-200"
+      className="relative w-full overflow-hidden bg-surface-primary select-none border-b border-border transition-colors duration-200"
       style={{
         paddingTop: 'max(44px, calc(72 * var(--u)))',
         paddingBottom: 'max(20px, calc(40 * var(--u)))',
@@ -91,7 +91,7 @@ const GlazeLogoTicker: React.FC = () => {
       {/* Caption */}
       <div className="text-center px-6">
         <p
-          className="font-inter-tight font-medium text-slate-500 dark:text-slate-400"
+          className="font-inter-tight font-medium text-text-secondary"
           style={{
             fontSize: 'max(14px, calc(20.66 * var(--u)))',
             letterSpacing: '0.033em',
@@ -117,7 +117,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 1 */}
           <ul
             ref={listRef}
-            className="flex items-center text-slate-700 dark:text-slate-300 shrink-0"
+            className="flex items-center text-text-secondary shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',
@@ -125,7 +125,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={idx} className={`shrink-0 leading-none ${item.fontClass} hover:text-slate-900 dark:hover:text-white transition-colors`}>
+              <li key={idx} className={`shrink-0 leading-none ${item.fontClass} hover:text-text-primary transition-colors`}>
                 {item.text}
               </li>
             ))}
@@ -134,7 +134,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 2 (Clone for seamless loop) */}
           <ul
             aria-hidden="true"
-            className="flex items-center text-slate-700 dark:text-slate-300 shrink-0"
+            className="flex items-center text-text-secondary shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',
@@ -142,7 +142,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass} hover:text-slate-900 dark:hover:text-white transition-colors`}>
+              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass} hover:text-text-primary transition-colors`}>
                 {item.text}
               </li>
             ))}

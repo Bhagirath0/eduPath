@@ -5,16 +5,16 @@ import Button from '@/components/ui/Button';
 
 const CertificateSection: React.FC = () => {
   return (
-    <section className="section-padding bg-white dark:bg-[#0b0d11] border-t border-slate-200 dark:border-white/10 transition-colors duration-200">
+    <section className="section-padding bg-surface-primary border-t border-border transition-colors duration-200">
       <div className="container-content">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Information */}
           <div className="lg:col-span-6 space-y-6">
             <span className="section-label">CREDENTIALS</span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
               Certificates Backed by Verified Completion
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
+            <p className="text-text-secondary text-base md:text-lg leading-relaxed">
               We do not issue participation certificates just for clicking through videos. Each EduPath certificate is earned after completing structured assignments, building practical projects, and meeting rigorous evaluation criteria.
             </p>
 
@@ -24,8 +24,8 @@ const CertificateSection: React.FC = () => {
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm text-slate-900 dark:text-white">Unique Verifiable ID</h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <h3 className="font-semibold text-sm text-text-primary">Unique Verifiable ID</h3>
+                  <p className="text-xs text-text-secondary">
                     Every certificate includes a tamper-resistant verification ID that employers or colleges can verify publicly.
                   </p>
                 </div>
@@ -36,8 +36,8 @@ const CertificateSection: React.FC = () => {
                   <CheckCircle2 className="w-4 h-4 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm text-slate-900 dark:text-white">Objective Evaluation</h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <h3 className="font-semibold text-sm text-text-primary">Objective Evaluation</h3>
+                  <p className="text-xs text-text-secondary">
                     Awarded after project submissions, code quality review, and module milestone evaluations.
                   </p>
                 </div>
@@ -48,8 +48,8 @@ const CertificateSection: React.FC = () => {
                   <Award className="w-4 h-4 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm text-slate-900 dark:text-white">Shareable Digital Portfolio</h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <h3 className="font-semibold text-sm text-text-primary">Shareable Digital Portfolio</h3>
+                  <p className="text-xs text-text-secondary">
                     Export high-resolution PDF credentials and showcase your verified technical projects on LinkedIn.
                   </p>
                 </div>

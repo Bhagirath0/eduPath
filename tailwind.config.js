@@ -19,6 +19,7 @@ export default {
           primary:   'var(--surface-primary)',
           secondary: 'var(--surface-secondary)',
           tertiary:  'var(--surface-tertiary)',
+          card:      'var(--card-bg)',
         },
         text: {
           primary:   'var(--text-primary)',

@@ -42,12 +42,12 @@ const BENEFITS = [
 
 export default function BenefitsSection() {
   return (
-    <section className="section-padding bg-slate-50 dark:bg-[#12151d] transition-colors duration-200">
+    <section className="section-padding bg-surface-secondary transition-colors duration-200">
       <div className="container-content">
         {/* Header */}
         <div className="text-center mb-12">
           <span className="section-label">WHY EDUPATH</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mt-2 tracking-tight">
             Built for Real Learning
           </h2>
         </div>
@@ -59,16 +59,16 @@ export default function BenefitsSection() {
             return (
               <div
                 key={b.title}
-                className="bg-white dark:bg-[#161a24] rounded-card border border-slate-200 dark:border-white/10 shadow-card p-6 flex flex-col gap-4"
+                className="bg-surface-primary rounded-card border border-border shadow-card p-6 flex flex-col gap-4"
               >
                 <div className="w-11 h-11 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center">
                   <Icon size={22} className="text-brand-blue" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
+                  <h3 className="font-semibold text-text-primary mb-1">
                     {b.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                  <p className="text-text-secondary text-sm leading-relaxed">
                     {b.desc}
                   </p>
                 </div>

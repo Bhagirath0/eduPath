@@ -107,13 +107,13 @@ const CoursesPage: React.FC = () => {
 
   return (
     <PublicLayout>
-      <div className="bg-slate-50 dark:bg-[#12151d] border-b border-slate-200 dark:border-white/10 py-12 md:py-16 transition-colors duration-200">
+      <div className="bg-surface-secondary border-b border-border py-12 md:py-16 transition-colors duration-200">
         <div className="container-content">
           <span className="section-label">CURRICULUM</span>
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mt-2 mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mt-2 mb-4">
             Structured Technical Courses
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl">
+          <p className="text-text-secondary text-base md:text-lg max-w-2xl">
             Explore focused, step-by-step courses designed to take you from foundational syntax to building practical, production-ready software.
           </p>
         </div>
@@ -121,16 +121,16 @@ const CoursesPage: React.FC = () => {
 
       <div className="container-content py-10">
         {/* Search and Filters Bar */}
-        <div className="bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 p-4 mb-8 shadow-card flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div className="bg-surface-primary rounded-xl border border-border p-4 mb-8 shadow-card flex flex-col md:flex-row gap-4 items-center justify-between">
           {/* Search Box */}
           <div className="relative w-full md:w-96">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-text-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search courses, topics, or skills…"
-              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 dark:bg-[#161a24] border border-slate-200 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"
+              className="w-full pl-10 pr-4 py-2 text-sm bg-surface-secondary border border-border rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"
             />
           </div>
 
@@ -138,11 +138,11 @@ const CoursesPage: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
             {/* Domain Selector */}
             <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-slate-400" />
+              <Filter className="w-4 h-4 text-text-muted" />
               <select
                 value={currentDomain}
                 onChange={(e) => handleDomainChange(e.target.value)}
-                className="text-xs bg-slate-50 dark:bg-[#161a24] border border-slate-200 dark:border-white/10 rounded-lg px-3 py-2 text-slate-900 dark:text-white focus:outline-none focus:border-brand-blue"
+                className="text-xs bg-surface-secondary border border-border rounded-lg px-3 py-2 text-text-primary focus:outline-none focus:border-brand-blue"
               >
                 {DOMAIN_OPTIONS.map((domain) => (
                   <option key={domain} value={domain}>
@@ -156,7 +156,7 @@ const CoursesPage: React.FC = () => {
             <select
               value={currentDifficulty}
               onChange={(e) => handleDifficultyChange(e.target.value)}
-              className="text-xs bg-slate-50 dark:bg-[#161a24] border border-slate-200 dark:border-white/10 rounded-lg px-3 py-2 text-slate-900 dark:text-white focus:outline-none focus:border-brand-blue"
+              className="text-xs bg-surface-secondary border border-border rounded-lg px-3 py-2 text-text-primary focus:outline-none focus:border-brand-blue"
             >
               {DIFFICULTY_OPTIONS.map((diff) => (
                 <option key={diff} value={diff}>
@@ -221,7 +221,7 @@ const CoursesPage: React.FC = () => {
               return (
                 <div
                   key={course.id}
-                  className="group bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 shadow-card hover:shadow-card-hover transition-all duration-200 flex flex-col overflow-hidden"
+                  className="group bg-surface-primary rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-200 flex flex-col overflow-hidden"
                 >
                   {/* Top Domain accent bar */}
                   <div className="h-1.5 w-full" style={{ backgroundColor: domainColor }} />
@@ -236,17 +236,17 @@ const CoursesPage: React.FC = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-brand-blue transition-colors line-clamp-1 mb-2">
+                    <h3 className="font-bold text-lg text-text-primary group-hover:text-brand-blue transition-colors line-clamp-1 mb-2">
                       {course.title}
                     </h3>
 
                     {/* Tagline */}
-                    <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+                    <p className="text-sm text-text-secondary line-clamp-2 mb-4 leading-relaxed">
                       {course.tagline}
                     </p>
 
                     {/* Duration stats */}
-                    <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-4 pb-4 border-b border-slate-200 dark:border-white/10">
+                    <div className="flex items-center gap-4 text-xs text-text-muted mb-4 pb-4 border-b border-border">
                       <span className="inline-flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
                         {course.durationWeeks} weeks
