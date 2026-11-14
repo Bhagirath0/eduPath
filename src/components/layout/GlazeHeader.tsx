@@ -45,7 +45,7 @@ const GlazeHeader: React.FC = () => {
           aria-label="EduPath home"
         >
           <span
-            className="font-kaushan text-text-primary leading-none transition-transform group-hover:scale-105"
+            className="font-kaushan text-slate-900 dark:text-white leading-none transition-transform group-hover:scale-105"
             style={{
               fontSize: 'max(20px, calc(31 * var(--u)))',
               transform: 'skewX(-6deg)',
@@ -85,7 +85,7 @@ const GlazeHeader: React.FC = () => {
             <NavLink
               key={item.to}
               to={item.to}
-              className="font-inter-tight text-text-secondary hover:text-text-primary transition-colors text-sm whitespace-nowrap"
+              className="font-inter-tight text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors text-sm whitespace-nowrap"
               style={{
                 fontSize: 'calc(17 * var(--u))',
               }}
@@ -138,7 +138,7 @@ const GlazeHeader: React.FC = () => {
 
         <Link
           to="/dashboard"
-          className="font-inter-tight text-text-secondary hover:text-text-primary transition-colors font-medium"
+          className="font-inter-tight text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition-colors font-medium"
           style={{ fontSize: 'max(13px, calc(17 * var(--u)))' }}
         >
           Login

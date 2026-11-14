@@ -55,7 +55,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title = 'Da
           <Link to="/" className="flex items-center gap-2 font-bold text-lg text-text-primary">
             <span className="w-2.5 h-2.5 rounded-sm bg-brand-blue" />
             EduPath
-            <span className="text-xs px-2 py-0.5 rounded bg-brand-blueLight text-brand-blue font-medium ml-1">
+            <span className="text-xs px-2 py-0.5 rounded bg-brand-blue/15 text-brand-blue dark:text-blue-400 font-medium ml-1">
               Student
             </span>
           </Link>
@@ -84,7 +84,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title = 'Da
                 className={({ isActive }) =>
                   `flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-brand-blueLight text-brand-blue'
+                      ? 'bg-brand-blue/15 text-brand-blue dark:text-blue-400'
                       : 'text-text-secondary hover:text-text-primary hover:bg-surface-secondary'
                   }`
                 }

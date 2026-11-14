@@ -45,7 +45,7 @@ interface StatCardProps {
 function StatCard({ label, value, icon, accent = 'text-brand-blue' }: StatCardProps) {
   return (
     <div className="bg-surface-primary rounded-card border border-border shadow-card p-5 flex items-center gap-4">
-      <div className={`p-3 rounded-xl bg-brand-blueLight ${accent}`}>{icon}</div>
+      <div className={`p-3 rounded-xl bg-brand-blue/10 dark:bg-brand-blue/20 ${accent}`}>{icon}</div>
       <div>
         <p className="text-2xl font-bold text-text-primary">{value}</p>
         <p className="text-sm text-text-secondary">{label}</p>

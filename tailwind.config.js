@@ -13,7 +13,7 @@ export default {
         brand: {
           blue:     '#2F63FF',
           blueDark: '#1E4FCC',
-          blueLight:'#EEF2FF',
+          blueLight:'rgba(47, 99, 255, 0.12)',
         },
         surface: {
           primary:   'var(--surface-primary)',
@@ -38,13 +38,13 @@ export default {
         },
         status: {
           success:     '#16A34A',
-          successLight:'#DCFCE7',
+          successLight:'rgba(22, 163, 74, 0.15)',
           warning:     '#D97706',
-          warningLight:'#FEF3C7',
+          warningLight:'rgba(217, 119, 6, 0.15)',
           error:       '#DC2626',
-          errorLight:  '#FEE2E2',
+          errorLight:  'rgba(220, 38, 38, 0.15)',
           info:        '#2563EB',
-          infoLight:   '#DBEAFE',
+          infoLight:   'rgba(37, 99, 235, 0.15)',
         },
       },
       fontFamily: {

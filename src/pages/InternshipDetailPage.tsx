@@ -161,7 +161,7 @@ const InternshipDetailPage: React.FC = () => {
                     className="p-5 rounded-xl border border-border bg-surface-primary shadow-card"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="px-2.5 py-1 rounded-md bg-brand-blueLight text-brand-blue text-xs font-mono font-semibold">
+                      <span className="px-2.5 py-1 rounded-md bg-brand-blue/15 text-brand-blue dark:text-blue-400 text-xs font-mono font-semibold border border-brand-blue/30">
                         Week {week.week}
                       </span>
                       <h3 className="font-bold text-base text-text-primary">{week.title}</h3>

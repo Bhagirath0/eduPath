@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Learn practical technical skills through structured courses, hands-on assignments, and project-based internships." />
     <title>EduPath — Learn Skills. Build Projects. Move Forward.</title>
+    <!-- Prevent flash of light mode -->
+    <script>
+      (function() {
+        var theme = localStorage.getItem('edupath_theme') || 'dark';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

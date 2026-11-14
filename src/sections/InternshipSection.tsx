@@ -30,7 +30,7 @@ const DOMAINS = [
 
 export default function InternshipSection() {
   return (
-    <section className="section-padding bg-surface-secondary text-text-primary relative overflow-hidden border-t border-b border-border">
+    <section className="section-padding bg-slate-50 dark:bg-[#111418] text-slate-900 dark:text-white relative overflow-hidden border-t border-b border-slate-200 dark:border-white/10 transition-colors duration-200">
       {/* Subtle ambient gradient in the background */}
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none"
@@ -50,27 +50,27 @@ export default function InternshipSection() {
               Online Internships
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
               Learn by Doing.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
                 Earn Recognition.
               </span>
             </h2>
 
-            <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
               Apply for structured online internships after completing foundational tracks. Work on realistic milestone deliverables, receive mentor reviews, and earn evaluated credentials.
             </p>
 
             {/* Domain chips */}
             <div>
-              <p className="text-xs uppercase tracking-wider font-semibold text-text-muted mb-3">
+              <p className="text-xs uppercase tracking-wider font-semibold text-slate-500 dark:text-slate-400 mb-3">
                 Available Internship Tracks:
               </p>
               <div className="flex flex-wrap gap-2">
                 {DOMAINS.map((d) => (
                   <span
                     key={d}
-                    className="px-3.5 py-1.5 rounded-lg border border-border text-text-secondary text-xs font-medium bg-surface-primary hover:bg-surface-tertiary transition-colors"
+                    className="px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200 text-xs font-medium bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
                   >
                     {d}
                   </span>
@@ -88,7 +88,7 @@ export default function InternshipSection() {
                 <ArrowRight className="w-4 h-4 text-white" />
               </Link>
 
-              <span className="text-xs text-text-muted flex items-center gap-1.5">
+              <span className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-status-success shrink-0" />
                 Free application · Evaluated on merit
               </span>
@@ -102,21 +102,21 @@ export default function InternshipSection() {
               return (
                 <div
                   key={f.title}
-                  className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-surface-primary border border-border hover:border-brand-blue/40 transition-all duration-300 group shadow-card"
+                  className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#161a24] border border-slate-200 dark:border-white/10 hover:border-brand-blue/40 transition-all duration-300 group shadow-card"
                 >
                   <div className="w-12 h-12 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-5 h-5 text-brand-blue" />
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-text-muted uppercase">
+                      <span className="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase">
                         0{idx + 1}
                       </span>
-                      <h4 className="font-semibold text-text-primary text-base">
+                      <h4 className="font-semibold text-slate-900 dark:text-white text-base">
                         {f.title}
                       </h4>
                     </div>
-                    <p className="text-text-secondary text-sm leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                       {f.desc}
                     </p>
                   </div>

@@ -343,7 +343,7 @@ const CourseDetailPage: React.FC = () => {
               <div className="pt-6 space-y-3">
                 {isEnrolled ? (
                   <div className="space-y-3">
-                    <div className="p-3 rounded-lg bg-brand-blueLight/70 border border-brand-blue/20 text-xs text-brand-blue font-medium flex items-center gap-2">
+                    <div className="p-3 rounded-lg bg-brand-blue/15 border border-brand-blue/30 text-xs text-brand-blue dark:text-blue-400 font-medium flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 shrink-0" />
                       <span>You are enrolled in this course</span>
                     </div>

@@ -44,7 +44,7 @@ const CertificatesPage: React.FC = () => {
           <div className="h-48 bg-surface-primary rounded-xl border border-border animate-pulse" />
         ) : certificates.length === 0 ? (
           <div className="bg-surface-primary rounded-xl border border-border p-8 sm:p-12 text-center max-w-2xl mx-auto shadow-card">
-            <div className="w-16 h-16 rounded-full bg-brand-blueLight flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-full bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center mx-auto mb-4">
               <Award className="w-8 h-8 text-brand-blue" />
             </div>
 

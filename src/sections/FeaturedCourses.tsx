@@ -23,15 +23,15 @@ export default function FeaturedCourses() {
   }, []);
 
   return (
-    <section className="section-padding bg-surface-primary">
+    <section className="section-padding bg-white dark:bg-[#0b0d11] transition-colors duration-200">
       <div className="container-content">
         {/* Header */}
         <div className="text-center mb-12">
           <span className="section-label">COURSES</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mt-2 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4 tracking-tight">
             Start Learning Today
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Structured courses across six technical domains, designed for
             complete beginners to intermediate learners.
           </p>
@@ -53,7 +53,7 @@ export default function FeaturedCourses() {
               return (
                 <div
                   key={course.id}
-                  className="bg-surface-secondary rounded-card border border-border shadow-card hover:border-brand-blue/50 hover:shadow-brand-blue/10 transition-all duration-200 flex flex-col overflow-hidden"
+                  className="bg-slate-50 dark:bg-[#121620] rounded-card border border-slate-200 dark:border-white/10 shadow-card hover:border-brand-blue/50 hover:shadow-brand-blue/10 transition-all duration-200 flex flex-col overflow-hidden"
                 >
                   {/* Color strip */}
                   <div
@@ -76,17 +76,17 @@ export default function FeaturedCourses() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-semibold text-lg text-text-primary mb-1">
+                    <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-1">
                       {course.title}
                     </h3>
 
                     {/* Tagline */}
-                    <p className="text-text-secondary text-sm line-clamp-2 mb-3">
+                    <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2 mb-3">
                       {course.tagline}
                     </p>
 
                     {/* Duration */}
-                    <p className="text-xs text-text-muted mb-4">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">
                       {course.durationWeeks} weeks &middot; {course.estimatedHours} hrs
                     </p>
 
@@ -95,13 +95,13 @@ export default function FeaturedCourses() {
                       {skills.slice(0, 3).map((skill: string) => (
                         <span
                           key={skill}
-                          className="px-2 py-0.5 rounded-md bg-surface-tertiary text-text-secondary text-xs border border-border"
+                          className="px-2 py-0.5 rounded-md bg-slate-200/60 dark:bg-surface-tertiary text-slate-700 dark:text-text-secondary text-xs border border-slate-300/40 dark:border-border"
                         >
                           {skill}
                         </span>
                       ))}
                       {extraSkills > 0 && (
-                        <span className="px-2 py-0.5 rounded-md bg-surface-tertiary text-text-muted text-xs border border-border">
+                        <span className="px-2 py-0.5 rounded-md bg-slate-200/60 dark:bg-surface-tertiary text-slate-500 dark:text-text-muted text-xs border border-slate-300/40 dark:border-border">
                           +{extraSkills} more
                         </span>
                       )}
@@ -111,7 +111,7 @@ export default function FeaturedCourses() {
                     <div className="mt-auto">
                       <button
                         onClick={() => navigate(`/courses/${course.slug}`)}
-                        className="w-full py-2.5 rounded-lg border border-border bg-surface-primary text-text-primary font-medium text-sm hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-200"
+                        className="w-full py-2.5 rounded-lg border border-slate-200 dark:border-border bg-white dark:bg-surface-primary text-slate-900 dark:text-white font-medium text-sm hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-200 shadow-sm"
                       >
                         View Course
                       </button>

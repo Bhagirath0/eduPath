@@ -57,7 +57,7 @@ const VerifyCertificatePage: React.FC = () => {
     <PublicLayout>
       <div className="bg-surface-secondary border-b border-border py-12 md:py-16">
         <div className="container-content text-center max-w-2xl mx-auto">
-          <div className="w-12 h-12 rounded-full bg-brand-blueLight flex items-center justify-center mx-auto mb-4">
+          <div className="w-12 h-12 rounded-full bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center mx-auto mb-4">
             <ShieldCheck className="w-6 h-6 text-brand-blue" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-3">

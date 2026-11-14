@@ -53,16 +53,17 @@ const Keychain3D: React.FC<Keychain3DProps> = ({ onReady, playEntrance }) => {
 
     // ── Camera & Rig ──────────────────────────────────────────────────────
     const cameraRig = new THREE.Group();
-    cameraRig.position.set(0, -4, 10); // Starts at y = -4 for entrance
+    cameraRig.position.set(0, 0, 0);
     scene.add(cameraRig);
 
     const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 500);
     const isDesktop = width / height >= 0.9;
     if (isDesktop) {
-      camera.position.set(0, 1.06, -4.4); // 5.6 units from z = 0
+      camera.position.set(0, 1.5, 5.4);
     } else {
-      camera.position.set(0, -0.9, 2.2);
+      camera.position.set(0, 1.6, 7.2);
     }
+    camera.lookAt(0, 1.5, 0);
     cameraRig.add(camera);
 
     // ── Lights ────────────────────────────────────────────────────────────
@@ -525,10 +526,11 @@ const Keychain3D: React.FC<Keychain3DProps> = ({ onReady, playEntrance }) => {
 
       const desktop = width / height >= 0.9;
       if (desktop) {
-        camera.position.set(0, 1.06, -4.4);
+        camera.position.set(0, 1.5, 5.4);
       } else {
-        camera.position.set(0, -0.9, 2.2);
+        camera.position.set(0, 1.6, 7.2);
       }
+      camera.lookAt(0, 1.5, 0);
     };
     window.addEventListener('resize', handleResize);
 
