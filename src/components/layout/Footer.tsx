@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-dark-DEFAULT text-white border-t border-dark-700">
+    <footer className="bg-[#0b0d11] text-white border-t border-white/10">
       <div className="container-content py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand Col */}
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
               We focus on genuine competency. Foundational courses are accessible at no cost. Internships and certificates are awarded based on real project completion and evaluation.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-dark-800 border border-dark-700 text-xs text-gray-300">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">
               <span className="w-2 h-2 rounded-full bg-status-success animate-pulse" />
               Verified Project Evaluation
             </div>

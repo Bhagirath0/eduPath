@@ -15,19 +15,19 @@ export default {
           blueLight:'#EEF2FF',
         },
         surface: {
-          primary:   '#FFFFFF',
-          secondary: '#F7F8FA',
-          tertiary:  '#F0F2F5',
+          primary:   '#0b0d11',
+          secondary: '#12151d',
+          tertiary:  '#1a1e29',
         },
         text: {
-          primary:   '#111111',
-          secondary: '#737373',
-          muted:     '#A3A3A3',
-          inverse:   '#FFFFFF',
+          primary:   '#f8fafc',
+          secondary: '#94a3b8',
+          muted:     '#64748b',
+          inverse:   '#111111',
         },
         border: {
-          DEFAULT: '#E5E7EB',
-          strong:  '#D1D5DB',
+          DEFAULT: 'rgba(255, 255, 255, 0.1)',
+          strong:  'rgba(255, 255, 255, 0.2)',
         },
         dark: {
           DEFAULT: '#111111',

@@ -83,11 +83,10 @@ const AssignmentsPage: React.FC = () => {
             <button
               key={st}
               onClick={() => setSelectedStatus(st)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                selectedStatus === st
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${selectedStatus === st
                   ? 'bg-brand-blue text-white'
                   : 'bg-surface-primary border border-border text-text-secondary hover:text-text-primary'
-              }`}
+                }`}
             >
               {st === 'all' ? 'All Assignments' : st.replace('-', ' ')}
             </button>
@@ -139,7 +138,6 @@ const AssignmentsPage: React.FC = () => {
                           {asgn.difficulty}
                         </span>
                       </div>
-
                       <h3 className="font-bold text-base text-text-primary">{asgn.title}</h3>
 
                       {asgn.deadlineDays && (
@@ -153,9 +151,8 @@ const AssignmentsPage: React.FC = () => {
                     <div className="flex items-center gap-3 shrink-0">
                       <span className={badge.className}>{badge.label}</span>
                       <ChevronDown
-                        className={`w-4 h-4 text-text-muted transition-transform duration-200 ${
-                          isExpanded ? 'rotate-180' : ''
-                        }`}
+                        className={`w-4 h-4 text-text-muted transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
+                          }`}
                       />
                     </div>
                   </div>

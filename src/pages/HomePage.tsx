@@ -3,7 +3,6 @@ import PublicLayout from '@/components/layout/PublicLayout';
 import FullLoader from '@/components/layout/FullLoader';
 import HeroSection from '@/sections/HeroSection';
 import GlazeLogoTicker from '@/sections/GlazeLogoTicker';
-import GlazeTimelineStatement from '@/sections/GlazeTimelineStatement';
 import FeaturedCourses from '@/sections/FeaturedCourses';
 import LearningDomains from '@/sections/LearningDomains';
 import HowItWorks from '@/sections/HowItWorks';
@@ -30,31 +29,28 @@ const HomePage: React.FC = () => {
         playEntrance={playEntrance}
       />
 
-      {/* 2. Logo Ticker: Drifting row of wordmarks with scroll velocity */}
+      {/* 2. Logo Ticker: Drifting row of skill wordmarks with scroll velocity */}
       <GlazeLogoTicker />
 
-      {/* 3. Timeline Tracks -> Statement: Flying clips FLIP animation */}
-      <GlazeTimelineStatement />
-
-      {/* 4. Student Experience: Featured Technical Courses */}
+      {/* 3. Student Experience: Featured Technical Courses */}
       <FeaturedCourses />
 
-      {/* 5. Six Technical Learning Paths */}
+      {/* 4. Six Technical Learning Paths */}
       <LearningDomains />
 
-      {/* 6. Step-by-Step Educational Journey */}
+      {/* 5. Step-by-Step Educational Journey */}
       <HowItWorks />
 
-      {/* 7. Online Internships Teaser */}
+      {/* 6. Online Internships Section */}
       <InternshipSection />
 
-      {/* 8. Platform Benefits */}
+      {/* 7. Platform Benefits */}
       <BenefitsSection />
 
-      {/* 9. Verified Credentials & Sample Mockup */}
+      {/* 8. Verified Credentials & Sample Mockup */}
       <CertificateSection />
 
-      {/* 10. Frequently Asked Questions */}
+      {/* 9. Frequently Asked Questions */}
       <FAQSection />
     </PublicLayout>
   );

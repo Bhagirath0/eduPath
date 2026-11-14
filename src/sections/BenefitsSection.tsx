@@ -61,8 +61,8 @@ export default function BenefitsSection() {
                 key={b.title}
                 className="bg-surface-primary rounded-card border border-border shadow-card p-6 flex flex-col gap-4"
               >
-                <div className="w-11 h-11 rounded-xl bg-brand-blueLight flex items-center justify-center">
-                  <Icon size={22} className="text-brand-blue" />
+                <div className="w-11 h-11 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center">
+                  <Icon size={22} className="text-blue-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-text-primary mb-1">

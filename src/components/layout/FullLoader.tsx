@@ -97,7 +97,7 @@ const FullLoader: React.FC<FullLoaderProps> = ({ onComplete, is3dReady }) => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#f4f7fb] pointer-events-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b0d11] pointer-events-auto"
       style={{
         clipPath: 'inset(0% 0% 0% 0%)',
         willChange: 'clip-path',
@@ -106,7 +106,7 @@ const FullLoader: React.FC<FullLoaderProps> = ({ onComplete, is3dReady }) => {
       <div className="overflow-hidden px-6 py-3">
         <p
           ref={textRef}
-          className="font-inter-tight font-medium text-text-primary text-center tracking-tight select-none"
+          className="font-inter-tight font-medium text-white text-center tracking-tight select-none"
           style={{
             fontSize: 'max(22px, calc(34 * var(--u)))',
             letterSpacing: '-0.01em',

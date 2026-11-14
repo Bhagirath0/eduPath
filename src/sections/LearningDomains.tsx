@@ -86,34 +86,34 @@ export default function LearningDomains() {
               <Link
                 key={domain.name}
                 to={`/courses?domain=${domain.param}`}
-                className="group bg-surface-primary rounded-card border border-border shadow-card hover:shadow-card-hover hover:scale-[1.02] transition-all duration-200 p-6 flex flex-col gap-4"
+                className="group bg-[#121620] rounded-card border border-white/10 hover:border-brand-blue/50 hover:bg-[#161b27] hover:scale-[1.02] transition-all duration-200 p-6 flex flex-col gap-4"
               >
                 {/* Icon */}
                 <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center"
-                  style={{ backgroundColor: domain.bg }}
+                  className="w-11 h-11 rounded-xl flex items-center justify-center border border-white/10"
+                  style={{ backgroundColor: `${domain.color}20` }}
                 >
                   <Icon size={22} style={{ color: domain.color }} />
                 </div>
 
                 {/* Text */}
                 <div className="flex-1">
-                  <h3 className="font-semibold text-text-primary mb-1">
+                  <h3 className="font-semibold text-white mb-1 group-hover:text-blue-400 transition-colors">
                     {domain.name}
                   </h3>
-                  <p className="text-text-secondary text-sm leading-snug">
+                  <p className="text-gray-400 text-sm leading-snug">
                     {domain.description}
                   </p>
                 </div>
 
                 {/* Footer */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-text-muted">
+                  <span className="text-xs text-gray-400">
                     {domain.courses} courses
                   </span>
                   <ArrowRight
                     size={16}
-                    className="text-text-muted group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200"
+                    className="text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200"
                   />
                 </div>
               </Link>

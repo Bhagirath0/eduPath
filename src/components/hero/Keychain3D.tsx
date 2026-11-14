@@ -45,7 +45,7 @@ const Keychain3D: React.FC<Keychain3DProps> = ({ onReady, playEntrance }) => {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.05;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.setClearColor(0xe3e9f2, 0);
+    renderer.setClearColor(0x0b0d11, 0);
     container.appendChild(renderer.domElement);
 
     // ── Scene ─────────────────────────────────────────────────────────────

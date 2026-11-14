@@ -82,7 +82,7 @@ const GlazeLogoTicker: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full overflow-hidden bg-surface-primary select-none"
+      className="relative w-full overflow-hidden bg-[#0b0d11] select-none border-b border-white/5"
       style={{
         paddingTop: 'max(44px, calc(72 * var(--u)))',
         paddingBottom: 'max(20px, calc(40 * var(--u)))',
@@ -91,11 +91,10 @@ const GlazeLogoTicker: React.FC = () => {
       {/* Caption */}
       <div className="text-center px-6">
         <p
-          className="font-inter-tight font-medium"
+          className="font-inter-tight font-medium text-gray-500"
           style={{
             fontSize: 'max(14px, calc(20.66 * var(--u)))',
             letterSpacing: '0.033em',
-            color: 'rgba(15, 20, 30, 0.38)',
           }}
         >
           Master industry-demanded technical skills through structured internships
@@ -106,8 +105,8 @@ const GlazeLogoTicker: React.FC = () => {
       <div
         className="relative w-full overflow-hidden mt-[max(20px,calc(52*var(--u)))]"
         style={{
-          maskImage: 'linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
         }}
       >
         <div
@@ -118,7 +117,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 1 */}
           <ul
             ref={listRef}
-            className="flex items-center text-[#0c0e12] shrink-0"
+            className="flex items-center text-gray-300 shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',
@@ -126,7 +125,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={idx} className={`shrink-0 leading-none ${item.fontClass}`}>
+              <li key={idx} className={`shrink-0 leading-none ${item.fontClass} hover:text-white transition-colors`}>
                 {item.text}
               </li>
             ))}
@@ -135,7 +134,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 2 (Clone for seamless loop) */}
           <ul
             aria-hidden="true"
-            className="flex items-center text-[#0c0e12] shrink-0"
+            className="flex items-center text-gray-300 shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',
@@ -143,7 +142,7 @@ const GlazeLogoTicker: React.FC = () => {
             }}
           >
             {LOGO_ITEMS.map((item, idx) => (
-              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass}`}>
+              <li key={`clone-${idx}`} className={`shrink-0 leading-none ${item.fontClass} hover:text-white transition-colors`}>
                 {item.text}
               </li>
             ))}

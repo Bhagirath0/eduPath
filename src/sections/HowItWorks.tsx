@@ -78,7 +78,7 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Circle */}
-                  <div className="relative z-10 flex-shrink-0 w-11 h-11 rounded-full border-2 border-brand-blue bg-white flex items-center justify-center">
+                  <div className="relative z-10 flex-shrink-0 w-11 h-11 rounded-full border-2 border-brand-blue bg-[#12151d] flex items-center justify-center shadow-lg shadow-brand-blue/20">
                     <span className="text-brand-blue font-bold text-xs">
                       {step.num}
                     </span>

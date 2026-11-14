@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
       style={{
         height: '100vh',
         minHeight: '560px',
-        background: 'linear-gradient(180deg, #dbe3ee 0%, #eef2f8 62%, #f4f7fb 100%)',
+        background: 'linear-gradient(180deg, #0d1117 0%, #111726 62%, #0b0d11 100%)',
       }}
     >
       {/* 3D Keychain simulation canvas */}
@@ -71,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
       >
         {/* Left: Headline in mask */}
         <div className="overflow-hidden pb-[0.08em] -mb-[0.08em]">
-          <h1 className="leading-none tracking-tight text-ink font-inter-tight font-medium">
+          <h1 className="leading-none tracking-tight text-white font-inter-tight font-medium">
             <span
               ref={headlineInnerRef}
               className="inline-block transform"
@@ -98,7 +98,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
         >
           <div
             ref={subtitleRef}
-            className="font-inter-tight text-[#111418] leading-tight"
+            className="font-inter-tight text-[#94a3b8] leading-tight"
             style={{
               fontSize: 'max(16px, calc(23.5 * var(--u)))',
               letterSpacing: '0.01em',
@@ -114,23 +114,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
             <Link
               ref={buttonRef}
               to="/internships"
-              className="inline-flex items-center justify-center font-inter-tight font-medium text-white transition-all duration-300"
+              className="inline-flex items-center justify-center font-inter-tight font-medium text-white bg-brand-blue hover:bg-brand-blueDark transition-all duration-300 shadow-lg shadow-blue-500/20"
               style={{
                 height: 'max(44px, calc(48 * var(--u)))',
                 paddingLeft: 'max(20px, calc(29 * var(--u)))',
                 paddingRight: 'max(20px, calc(29 * var(--u)))',
                 borderRadius: 'max(11px, calc(13 * var(--u)))',
-                backgroundColor: '#16191f',
                 fontSize: 'max(14px, calc(16 * var(--u)))',
                 letterSpacing: '0.02em',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'scale(1.05)';
-                e.currentTarget.style.backgroundColor = '#2b3140';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.backgroundColor = '#16191f';
               }}
             >
               Explore Internships
@@ -138,7 +135,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
 
             <Link
               to="/courses"
-              className="inline-flex items-center justify-center font-inter-tight font-medium text-text-primary border border-border bg-white/90 hover:bg-white transition-all duration-300"
+              className="inline-flex items-center justify-center font-inter-tight font-medium text-white border border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
               style={{
                 height: 'max(44px, calc(48 * var(--u)))',
                 paddingLeft: 'max(18px, calc(24 * var(--u)))',

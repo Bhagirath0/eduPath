@@ -20,8 +20,8 @@ const CertificateSection: React.FC = () => {
 
             <div className="space-y-4 pt-2">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-status-successLight flex items-center justify-center shrink-0 mt-0.5">
-                  <ShieldCheck className="w-4 h-4 text-status-success" />
+                <div className="w-6 h-6 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm text-text-primary">Unique Verifiable ID</h3>
@@ -32,8 +32,8 @@ const CertificateSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4 text-brand-blue" />
+                <div className="w-6 h-6 rounded-full bg-blue-500/15 border border-blue-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm text-text-primary">Objective Evaluation</h3>
@@ -44,8 +44,8 @@ const CertificateSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <Award className="w-4 h-4 text-purple-600" />
+                <div className="w-6 h-6 rounded-full bg-purple-500/15 border border-purple-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Award className="w-4 h-4 text-purple-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm text-text-primary">Shareable Digital Portfolio</h3>
@@ -73,12 +73,12 @@ const CertificateSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative mx-auto max-w-lg">
               {/* Decorative background glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-2xl filter blur-xl opacity-70 -z-10" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl filter blur-xl opacity-70 -z-10" />
 
               {/* Certificate Card */}
-              <div className="bg-white rounded-xl border-2 border-border shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+              <div className="bg-[#121620] rounded-xl border border-white/15 shadow-2xl p-6 sm:p-8 relative overflow-hidden">
                 {/* Certificate top accent */}
-                <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-brand-blue via-indigo-600 to-brand-blue" />
+                <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-brand-blue via-indigo-500 to-brand-blue" />
 
                 {/* Header */}
                 <div className="flex items-center justify-between pb-6 border-b border-border">
