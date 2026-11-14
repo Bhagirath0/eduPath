@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -15,19 +16,19 @@ export default {
           blueLight:'#EEF2FF',
         },
         surface: {
-          primary:   '#0b0d11',
-          secondary: '#12151d',
-          tertiary:  '#1a1e29',
+          primary:   'var(--surface-primary)',
+          secondary: 'var(--surface-secondary)',
+          tertiary:  'var(--surface-tertiary)',
         },
         text: {
-          primary:   '#f8fafc',
-          secondary: '#94a3b8',
-          muted:     '#64748b',
-          inverse:   '#111111',
+          primary:   'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted:     'var(--text-muted)',
+          inverse:   'var(--text-inverse)',
         },
         border: {
-          DEFAULT: 'rgba(255, 255, 255, 0.1)',
-          strong:  'rgba(255, 255, 255, 0.2)',
+          DEFAULT: 'var(--border-color)',
+          strong:  'var(--border-strong)',
         },
         dark: {
           DEFAULT: '#111111',

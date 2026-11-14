@@ -53,7 +53,7 @@ export default function FeaturedCourses() {
               return (
                 <div
                   key={course.id}
-                  className="bg-[#121620] rounded-card border border-white/10 shadow-lg hover:border-brand-blue/50 hover:shadow-brand-blue/10 transition-all duration-200 flex flex-col overflow-hidden"
+                  className="bg-surface-secondary rounded-card border border-border shadow-card hover:border-brand-blue/50 hover:shadow-brand-blue/10 transition-all duration-200 flex flex-col overflow-hidden"
                 >
                   {/* Color strip */}
                   <div
@@ -95,13 +95,13 @@ export default function FeaturedCourses() {
                       {skills.slice(0, 3).map((skill: string) => (
                         <span
                           key={skill}
-                          className="px-2 py-0.5 rounded-md bg-white/5 text-gray-300 text-xs border border-white/10"
+                          className="px-2 py-0.5 rounded-md bg-surface-tertiary text-text-secondary text-xs border border-border"
                         >
                           {skill}
                         </span>
                       ))}
                       {extraSkills > 0 && (
-                        <span className="px-2 py-0.5 rounded-md bg-white/5 text-gray-400 text-xs border border-white/10">
+                        <span className="px-2 py-0.5 rounded-md bg-surface-tertiary text-text-muted text-xs border border-border">
                           +{extraSkills} more
                         </span>
                       )}
@@ -111,7 +111,7 @@ export default function FeaturedCourses() {
                     <div className="mt-auto">
                       <button
                         onClick={() => navigate(`/courses/${course.slug}`)}
-                        className="w-full py-2.5 rounded-lg border border-white/10 bg-white/5 text-white font-medium text-sm hover:bg-brand-blue hover:border-brand-blue transition-all duration-200"
+                        className="w-full py-2.5 rounded-lg border border-border bg-surface-primary text-text-primary font-medium text-sm hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-200"
                       >
                         View Course
                       </button>

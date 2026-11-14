@@ -76,7 +76,7 @@ const CertificateSection: React.FC = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl filter blur-xl opacity-70 -z-10" />
 
               {/* Certificate Card */}
-              <div className="bg-[#121620] rounded-xl border border-white/15 shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+              <div className="bg-surface-primary rounded-xl border border-border shadow-2xl p-6 sm:p-8 relative overflow-hidden">
                 {/* Certificate top accent */}
                 <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-brand-blue via-indigo-500 to-brand-blue" />
 

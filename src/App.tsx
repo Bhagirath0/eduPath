@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 // ── Eager-loaded (critical path) ──────────────────────────────────
 import HomePage from '@/pages/HomePage';
@@ -31,31 +32,33 @@ function PageLoader() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          {/* ── Public ─────────────────────────────────────────── */}
-          <Route path="/"                      element={<HomePage />} />
-          <Route path="/courses"               element={<CoursesPage />} />
-          <Route path="/courses/:slug"         element={<CourseDetailPage />} />
-          <Route path="/internships"           element={<InternshipsPage />} />
-          <Route path="/internships/:slug"     element={<InternshipDetailPage />} />
-          <Route path="/verify-certificate"    element={<VerifyCertificatePage />} />
+    <ThemeProvider>
+      <BrowserRouter>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            {/* ── Public ─────────────────────────────────────────── */}
+            <Route path="/"                      element={<HomePage />} />
+            <Route path="/courses"               element={<CoursesPage />} />
+            <Route path="/courses/:slug"         element={<CourseDetailPage />} />
+            <Route path="/internships"           element={<InternshipsPage />} />
+            <Route path="/internships/:slug"     element={<InternshipDetailPage />} />
+            <Route path="/verify-certificate"    element={<VerifyCertificatePage />} />
 
-          {/* ── Student Dashboard ───────────────────────────────── */}
-          <Route path="/dashboard"             element={<DashboardPage />} />
-          <Route path="/dashboard/assignments" element={<AssignmentsPage />} />
-          <Route path="/dashboard/projects"    element={<ProjectsPage />} />
-          <Route path="/dashboard/certificates"element={<CertificatesPage />} />
+            {/* ── Student Dashboard ───────────────────────────────── */}
+            <Route path="/dashboard"             element={<DashboardPage />} />
+            <Route path="/dashboard/assignments" element={<AssignmentsPage />} />
+            <Route path="/dashboard/projects"    element={<ProjectsPage />} />
+            <Route path="/dashboard/certificates"element={<CertificatesPage />} />
 
-          {/* ── Learning Interface ──────────────────────────────── */}
-          <Route path="/learn/:courseSlug/:moduleSlug" element={<LearningPage />} />
+            {/* ── Learning Interface ──────────────────────────────── */}
+            <Route path="/learn/:courseSlug/:moduleSlug" element={<LearningPage />} />
 
-          {/* ── 404 ────────────────────────────────────────────── */}
-          <Route path="*"                      element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+            {/* ── 404 ────────────────────────────────────────────── */}
+            <Route path="*"                      element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

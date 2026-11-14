@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const GlazeHeader: React.FC = () => {
   const [isCompact, setIsCompact] = useState(false);
@@ -27,14 +28,14 @@ const GlazeHeader: React.FC = () => {
         style={{
           height: 'max(46px, calc(64 * var(--u)))',
           borderRadius: 'max(12px, calc(16 * var(--u)))',
-          backgroundColor: 'rgba(18, 22, 30, 0.85)',
+          backgroundColor: 'var(--pill-bg)',
           paddingLeft: 'max(14px, calc(22 * var(--u)))',
           paddingRight: 'max(14px, calc(22 * var(--u)))',
           width: isCompact
             ? 'max(128px, calc(250 * var(--u)))'
             : 'max(128px, min(100%, calc(708 * var(--u))))',
           transition: 'width 0.6s cubic-bezier(0.7, 0, 0.2, 1), background-color 0.2s',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
+          border: '1px solid var(--pill-border)',
         }}
       >
         {/* Logo */}
@@ -44,7 +45,7 @@ const GlazeHeader: React.FC = () => {
           aria-label="EduPath home"
         >
           <span
-            className="font-kaushan text-white leading-none transition-transform group-hover:scale-105"
+            className="font-kaushan text-text-primary leading-none transition-transform group-hover:scale-105"
             style={{
               fontSize: 'max(20px, calc(31 * var(--u)))',
               transform: 'skewX(-6deg)',
@@ -84,7 +85,7 @@ const GlazeHeader: React.FC = () => {
             <NavLink
               key={item.to}
               to={item.to}
-              className="font-inter-tight text-[#94a3b8] hover:text-white transition-colors text-sm whitespace-nowrap"
+              className="font-inter-tight text-text-secondary hover:text-text-primary transition-colors text-sm whitespace-nowrap"
               style={{
                 fontSize: 'calc(17 * var(--u))',
               }}
@@ -98,7 +99,7 @@ const GlazeHeader: React.FC = () => {
         <button
           type="button"
           aria-label="More navigation options"
-          className="flex items-center justify-center shrink-0 text-[#94a3b8] hover:text-white transition-colors ml-auto"
+          className="flex items-center justify-center shrink-0 text-text-secondary hover:text-text-primary transition-colors ml-auto"
           style={{
             width: 'max(22px, calc(30 * var(--u)))',
             height: 'max(22px, calc(30 * var(--u)))',
@@ -125,16 +126,19 @@ const GlazeHeader: React.FC = () => {
           height: 'max(46px, calc(60 * var(--u)))',
           marginTop: 'calc(2 * var(--u))',
           borderRadius: 'max(12px, calc(16 * var(--u)))',
-          backgroundColor: 'rgba(18, 22, 30, 0.85)',
-          paddingLeft: 'max(14px, calc(22 * var(--u)))',
+          backgroundColor: 'var(--pill-bg)',
+          paddingLeft: 'max(10px, calc(16 * var(--u)))',
           paddingRight: 'max(8px, calc(13 * var(--u)))',
-          gap: 'max(10px, calc(18 * var(--u)))',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
+          gap: 'max(8px, calc(14 * var(--u)))',
+          border: '1px solid var(--pill-border)',
         }}
       >
+        {/* Dark / Light Mode Switch */}
+        <ThemeToggle />
+
         <Link
           to="/dashboard"
-          className="font-inter-tight text-[#cbd5e1] hover:text-white transition-colors font-medium"
+          className="font-inter-tight text-text-secondary hover:text-text-primary transition-colors font-medium"
           style={{ fontSize: 'max(13px, calc(17 * var(--u)))' }}
         >
           Login
@@ -157,4 +161,3 @@ const GlazeHeader: React.FC = () => {
 };
 
 export default GlazeHeader;
-

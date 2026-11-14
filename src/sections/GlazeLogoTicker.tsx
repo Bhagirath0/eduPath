@@ -82,7 +82,7 @@ const GlazeLogoTicker: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full overflow-hidden bg-[#0b0d11] select-none border-b border-white/5"
+      className="relative w-full overflow-hidden bg-surface-primary select-none border-b border-border"
       style={{
         paddingTop: 'max(44px, calc(72 * var(--u)))',
         paddingBottom: 'max(20px, calc(40 * var(--u)))',
@@ -91,7 +91,7 @@ const GlazeLogoTicker: React.FC = () => {
       {/* Caption */}
       <div className="text-center px-6">
         <p
-          className="font-inter-tight font-medium text-gray-500"
+          className="font-inter-tight font-medium text-text-muted"
           style={{
             fontSize: 'max(14px, calc(20.66 * var(--u)))',
             letterSpacing: '0.033em',
@@ -117,7 +117,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 1 */}
           <ul
             ref={listRef}
-            className="flex items-center text-gray-300 shrink-0"
+            className="flex items-center text-text-secondary shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',
@@ -134,7 +134,7 @@ const GlazeLogoTicker: React.FC = () => {
           {/* List 2 (Clone for seamless loop) */}
           <ul
             aria-hidden="true"
-            className="flex items-center text-gray-300 shrink-0"
+            className="flex items-center text-text-secondary shrink-0"
             style={{
               gap: 'max(48px, calc(96 * var(--u)))',
               paddingRight: 'max(48px, calc(96 * var(--u)))',

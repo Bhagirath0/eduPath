@@ -23,9 +23,9 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     'bg-brand-blue text-white hover:bg-brand-blueDark focus:ring-brand-blue/30',
   secondary:
-    'border border-border bg-white text-text-primary hover:bg-surface-secondary focus:ring-gray-200',
+    'border border-border bg-surface-primary text-text-primary hover:bg-surface-secondary focus:ring-brand-blue/30',
   ghost:
-    'text-text-secondary hover:text-text-primary hover:bg-surface-secondary focus:ring-gray-200',
+    'text-text-secondary hover:text-text-primary hover:bg-surface-secondary focus:ring-brand-blue/30',
   danger:
     'bg-red-600 text-white hover:bg-red-700 focus:ring-red-300',
 };

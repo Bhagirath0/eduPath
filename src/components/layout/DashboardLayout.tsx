@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 import {
   LayoutDashboard,
   BookOpen,
@@ -122,7 +123,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title = 'Da
             <button
               onClick={() => navigate('/')}
               title="Return to site"
-              className="p-1.5 rounded-md text-text-secondary hover:text-text-primary hover:bg-white"
+              className="p-1.5 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-secondary"
             >
               <LogOut className="w-4 h-4" />
             </button>
@@ -146,9 +147,10 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title = 'Da
           </div>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <Link
               to="/courses"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-border bg-white text-text-primary hover:border-brand-blue hover:text-brand-blue transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-border bg-surface-secondary text-text-primary hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
               <Sparkles className="w-3.5 h-3.5 text-brand-blue" />
               Browse Courses

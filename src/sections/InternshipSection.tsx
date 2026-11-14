@@ -30,7 +30,7 @@ const DOMAINS = [
 
 export default function InternshipSection() {
   return (
-    <section className="section-padding bg-[#111418] text-white relative overflow-hidden border-t border-b border-white/10">
+    <section className="section-padding bg-surface-secondary text-text-primary relative overflow-hidden border-t border-b border-border">
       {/* Subtle ambient gradient in the background */}
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none"
@@ -45,32 +45,32 @@ export default function InternshipSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left column */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-xs font-semibold uppercase tracking-wider text-blue-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-xs font-semibold uppercase tracking-wider text-brand-blue">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-blue animate-pulse" />
               Online Internships
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary leading-[1.15]">
               Learn by Doing.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
                 Earn Recognition.
               </span>
             </h2>
 
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
               Apply for structured online internships after completing foundational tracks. Work on realistic milestone deliverables, receive mentor reviews, and earn evaluated credentials.
             </p>
 
             {/* Domain chips */}
             <div>
-              <p className="text-xs uppercase tracking-wider font-semibold text-gray-400 mb-3">
+              <p className="text-xs uppercase tracking-wider font-semibold text-text-muted mb-3">
                 Available Internship Tracks:
               </p>
               <div className="flex flex-wrap gap-2">
                 {DOMAINS.map((d) => (
                   <span
                     key={d}
-                    className="px-3.5 py-1.5 rounded-lg border border-white/10 text-gray-200 text-xs font-medium bg-white/5 hover:bg-white/10 transition-colors"
+                    className="px-3.5 py-1.5 rounded-lg border border-border text-text-secondary text-xs font-medium bg-surface-primary hover:bg-surface-tertiary transition-colors"
                   >
                     {d}
                   </span>
@@ -82,14 +82,14 @@ export default function InternshipSection() {
             <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
                 to="/internships"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white text-[#111418] font-semibold text-sm hover:bg-gray-100 transition-all duration-200 shadow-lg shadow-black/20 hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-blue text-white font-semibold text-sm hover:bg-brand-blueDark transition-all duration-200 shadow-lg shadow-blue-500/20 hover:scale-[1.02]"
               >
                 <span>Explore Internships</span>
-                <ArrowRight className="w-4 h-4 text-[#111418]" />
+                <ArrowRight className="w-4 h-4 text-white" />
               </Link>
 
-              <span className="text-xs text-gray-400 flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-xs text-text-muted flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-status-success shrink-0" />
                 Free application · Evaluated on merit
               </span>
             </div>
@@ -102,21 +102,21 @@ export default function InternshipSection() {
               return (
                 <div
                   key={f.title}
-                  className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-brand-blue/40 hover:bg-white/[0.07] transition-all duration-300 group"
+                  className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-surface-primary border border-border hover:border-brand-blue/40 transition-all duration-300 group shadow-card"
                 >
                   <div className="w-12 h-12 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-5 h-5 text-blue-400" />
+                    <Icon className="w-5 h-5 text-brand-blue" />
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-gray-500 uppercase">
+                      <span className="text-[10px] font-mono text-text-muted uppercase">
                         0{idx + 1}
                       </span>
-                      <h4 className="font-semibold text-white text-base">
+                      <h4 className="font-semibold text-text-primary text-base">
                         {f.title}
                       </h4>
                     </div>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-text-secondary text-sm leading-relaxed">
                       {f.desc}
                     </p>
                   </div>
