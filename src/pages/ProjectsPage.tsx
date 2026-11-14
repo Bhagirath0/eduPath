@@ -50,8 +50,8 @@ const ProjectsPage: React.FC = () => {
     <DashboardLayout title="Projects">
       <div className="space-y-6">
         <div>
-          <h2 className="text-xl font-bold text-text-primary">Capstone & Course Projects</h2>
-          <p className="text-sm text-text-secondary mt-1">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Capstone & Course Projects</h2>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
             Build full-scale technical projects to demonstrate applied competence and qualify for evaluated certification.
           </p>
         </div>
@@ -59,14 +59,14 @@ const ProjectsPage: React.FC = () => {
         {loading ? (
           <div className="space-y-4">
             {[1, 2].map((i) => (
-              <div key={i} className="h-40 bg-surface-primary rounded-xl border border-border animate-pulse" />
+              <div key={i} className="h-40 bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 animate-pulse" />
             ))}
           </div>
         ) : projects.length === 0 ? (
-          <div className="p-12 text-center bg-surface-primary rounded-xl border border-border">
-            <FolderGit2 className="w-10 h-10 text-text-muted mx-auto mb-3 opacity-60" />
-            <h3 className="font-semibold text-text-primary mb-1">No active projects</h3>
-            <p className="text-xs text-text-secondary">
+          <div className="p-12 text-center bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10">
+            <FolderGit2 className="w-10 h-10 text-slate-400 dark:text-slate-500 mx-auto mb-3 opacity-60" />
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-1">No active projects</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               Enroll in a course and complete the foundational modules to unlock project milestones.
             </p>
           </div>
@@ -81,12 +81,12 @@ const ProjectsPage: React.FC = () => {
               return (
                 <div
                   key={proj.id}
-                  className="bg-surface-primary rounded-xl border border-border shadow-card overflow-hidden"
+                  className="bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 shadow-card overflow-hidden"
                 >
                   {/* Top Summary */}
                   <div
                     onClick={() => toggleExpand(proj.id)}
-                    className="p-6 cursor-pointer hover:bg-surface-secondary/40 transition-colors"
+                    className="p-6 cursor-pointer hover:bg-slate-50 dark:hover:bg-white/5 transition-colors"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
                       <div>
@@ -94,19 +94,19 @@ const ProjectsPage: React.FC = () => {
                           <BookOpen className="w-3.5 h-3.5" />
                           {proj.courseTitle}
                         </span>
-                        <h3 className="font-bold text-lg text-text-primary">{proj.title}</h3>
+                        <h3 className="font-bold text-lg text-slate-900 dark:text-white">{proj.title}</h3>
                       </div>
                       <div className="flex items-center gap-3">
                         <span className={badge.className}>{badge.label}</span>
                         <ChevronDown
-                          className={`w-4 h-4 text-text-muted transition-transform duration-200 ${
+                          className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
                             isExpanded ? 'rotate-180' : ''
                           }`}
                         />
                       </div>
                     </div>
 
-                    <p className="text-sm text-text-secondary line-clamp-2 leading-relaxed">
+                    <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                       {proj.description}
                     </p>
                   </div>

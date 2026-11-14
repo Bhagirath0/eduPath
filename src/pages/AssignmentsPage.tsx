@@ -71,21 +71,21 @@ const AssignmentsPage: React.FC = () => {
       <div className="space-y-6">
         {/* Header */}
         <div>
-          <h2 className="text-xl font-bold text-text-primary">Course Assignments</h2>
-          <p className="text-sm text-text-secondary mt-1">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Course Assignments</h2>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
             Practical programming tasks designed to reinforce concepts from each module.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 border-b border-border pb-3">
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 dark:border-white/10 pb-3">
           {STATUS_FILTERS.map((st) => (
             <button
               key={st}
               onClick={() => setSelectedStatus(st)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${selectedStatus === st
-                  ? 'bg-brand-blue text-white'
-                  : 'bg-surface-primary border border-border text-text-secondary hover:text-text-primary'
+                  ? 'bg-brand-blue text-white shadow-sm'
+                  : 'bg-white dark:bg-[#121620] border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                 }`}
             >
               {st === 'all' ? 'All Assignments' : st.replace('-', ' ')}
@@ -97,14 +97,14 @@ const AssignmentsPage: React.FC = () => {
         {loading ? (
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="h-28 bg-surface-primary rounded-xl border border-border animate-pulse" />
+              <div key={i} className="h-28 bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 animate-pulse" />
             ))}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="p-12 text-center bg-surface-primary rounded-xl border border-border">
-            <FileCheck2 className="w-10 h-10 text-text-muted mx-auto mb-3 opacity-60" />
-            <h3 className="font-semibold text-text-primary mb-1">No assignments found</h3>
-            <p className="text-xs text-text-secondary">
+          <div className="p-12 text-center bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10">
+            <FileCheck2 className="w-10 h-10 text-slate-400 dark:text-slate-500 mx-auto mb-3 opacity-60" />
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-1">No assignments found</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               There are no assignments matching the selected status.
             </p>
           </div>
@@ -119,11 +119,11 @@ const AssignmentsPage: React.FC = () => {
               return (
                 <div
                   key={asgn.id}
-                  className="bg-surface-primary rounded-xl border border-border shadow-card overflow-hidden transition-all"
+                  className="bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 shadow-card overflow-hidden transition-all"
                 >
                   <div
                     onClick={() => toggleExpand(asgn.id)}
-                    className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:bg-surface-secondary/40 transition-colors"
+                    className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-white/5 transition-colors"
                   >
                     <div className="space-y-1.5 min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
@@ -132,16 +132,16 @@ const AssignmentsPage: React.FC = () => {
                           {asgn.courseTitle}
                         </span>
                         {asgn.moduleTitle && (
-                          <span className="text-xs text-text-muted">· {asgn.moduleTitle}</span>
+                          <span className="text-xs text-slate-500 dark:text-slate-400">· {asgn.moduleTitle}</span>
                         )}
                         <span className={DIFFICULTY_BADGE[asgn.difficulty] ?? 'badge badge-gray'}>
                           {asgn.difficulty}
                         </span>
                       </div>
-                      <h3 className="font-bold text-base text-text-primary">{asgn.title}</h3>
+                      <h3 className="font-bold text-base text-slate-900 dark:text-white">{asgn.title}</h3>
 
                       {asgn.deadlineDays && (
-                        <p className="text-xs text-text-muted flex items-center gap-1">
+                        <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
                           <Clock className="w-3 h-3" />
                           Recommended deadline: {asgn.deadlineDays} days after module completion
                         </p>
@@ -151,7 +151,7 @@ const AssignmentsPage: React.FC = () => {
                     <div className="flex items-center gap-3 shrink-0">
                       <span className={badge.className}>{badge.label}</span>
                       <ChevronDown
-                        className={`w-4 h-4 text-text-muted transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
+                        className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
                           }`}
                       />
                     </div>
@@ -159,19 +159,19 @@ const AssignmentsPage: React.FC = () => {
 
                   {/* Expanded instructions & submission */}
                   {isExpanded && (
-                    <div className="px-5 pb-6 pt-2 border-t border-border bg-surface-secondary/30 space-y-4">
+                    <div className="px-5 pb-6 pt-2 border-t border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-white/[0.02] space-y-4">
                       <div>
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
                           Instructions & Problem Statement
                         </h4>
-                        <div className="p-4 rounded-lg bg-surface-primary border border-border text-xs text-text-secondary leading-relaxed">
+                        <div className="p-4 rounded-lg bg-white dark:bg-[#161a24] border border-slate-200 dark:border-white/10 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                           {asgn.instructions}
                         </div>
                       </div>
 
                       {/* Mock submission form */}
-                      <div className="p-4 rounded-lg bg-surface-primary border border-border space-y-3">
-                        <h4 className="text-xs font-semibold text-text-primary flex items-center gap-2">
+                      <div className="p-4 rounded-lg bg-white dark:bg-[#161a24] border border-slate-200 dark:border-white/10 space-y-3">
+                        <h4 className="text-xs font-semibold text-slate-900 dark:text-white flex items-center gap-2">
                           <Upload className="w-3.5 h-3.5 text-brand-blue" />
                           Assignment Submission
                         </h4>

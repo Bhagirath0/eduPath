@@ -108,7 +108,7 @@ const CourseDetailPage: React.FC = () => {
   return (
     <PublicLayout>
       {/* Course Header Banner */}
-      <div className="bg-surface-secondary border-b border-border py-12 md:py-16">
+      <div className="bg-slate-50 dark:bg-[#12151d] border-b border-slate-200 dark:border-white/10 py-12 md:py-16 transition-colors duration-200">
         <div className="container-content">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="badge badge-blue">{course.domain}</span>
@@ -117,15 +117,15 @@ const CourseDetailPage: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-4 max-w-4xl">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 max-w-4xl">
             {course.title}
           </h1>
 
-          <p className="text-text-secondary text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
+          <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
             {course.tagline}
           </p>
 
-          <div className="flex flex-wrap items-center gap-6 text-sm text-text-secondary">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-brand-blue" />
               <span>{course.durationWeeks} weeks ({course.estimatedHours} total hours)</span>
@@ -149,25 +149,25 @@ const CourseDetailPage: React.FC = () => {
           <div className="lg:col-span-8 space-y-12">
             {/* Overview */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 About This Course
               </h2>
-              <p className="text-text-secondary leading-relaxed text-base">
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
                 {course.description}
               </p>
             </section>
 
             {/* What you will learn */}
             {whatYouWillLearn.length > 0 && (
-              <section className="bg-surface-secondary rounded-xl border border-border p-6 sm:p-8">
-                <h2 className="text-xl font-bold text-text-primary mb-4">
+              <section className="bg-slate-50 dark:bg-[#161a24] rounded-xl border border-slate-200 dark:border-white/10 p-6 sm:p-8">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
                   What You Will Learn
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   {whatYouWillLearn.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-status-success shrink-0 mt-0.5" />
-                      <span className="text-sm text-text-primary leading-snug">{item}</span>
+                      <span className="text-sm text-slate-800 dark:text-slate-200 leading-snug">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -177,14 +177,14 @@ const CourseDetailPage: React.FC = () => {
             {/* Skills Covered */}
             {skills.length > 0 && (
               <section>
-                <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                   Skills Covered
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 rounded-lg text-xs font-medium bg-surface-secondary border border-border text-text-primary"
+                      className="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-[#161a24] border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200"
                     >
                       {skill}
                     </span>
@@ -199,7 +199,7 @@ const CourseDetailPage: React.FC = () => {
                 <h2 className="text-xl font-bold text-text-primary">
                   Course Curriculum
                 </h2>
-                <span className="text-xs text-text-muted">
+                <span className="text-xs text-slate-500 dark:text-slate-400">
                   {course.modules?.length ?? 0} modules · Click to view lessons
                 </span>
               </div>
@@ -210,23 +210,23 @@ const CourseDetailPage: React.FC = () => {
                   return (
                     <div
                       key={mod.id}
-                      className="rounded-xl border border-border bg-surface-primary overflow-hidden transition-all shadow-card"
+                      className="rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#121620] overflow-hidden transition-all shadow-card"
                     >
                       {/* Module Header Button */}
                       <button
                         onClick={() => toggleModule(mod.id)}
-                        className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-surface-secondary/50 transition-colors"
+                        className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors"
                       >
                         <div className="flex items-center gap-3 min-w-0">
-                          <span className="w-6 h-6 rounded-md bg-surface-secondary text-text-secondary text-xs font-mono font-semibold flex items-center justify-center shrink-0 border border-border">
+                          <span className="w-6 h-6 rounded-md bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 text-xs font-mono font-semibold flex items-center justify-center shrink-0 border border-slate-200 dark:border-white/10">
                             {String(index + 1).padStart(2, '0')}
                           </span>
                           <div>
-                            <h3 className="font-semibold text-sm text-text-primary truncate">
+                            <h3 className="font-semibold text-sm text-slate-900 dark:text-white truncate">
                               {mod.title}
                             </h3>
                             {mod.description && (
-                              <p className="text-xs text-text-secondary line-clamp-1 mt-0.5">
+                              <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
                                 {mod.description}
                               </p>
                             )}
@@ -234,11 +234,11 @@ const CourseDetailPage: React.FC = () => {
                         </div>
 
                         <div className="flex items-center gap-3 shrink-0">
-                          <span className="text-xs text-text-muted">
+                          <span className="text-xs text-slate-400 dark:text-slate-500">
                             {mod.lessons?.length ?? 0} lessons
                           </span>
                           <ChevronDown
-                            className={`w-4 h-4 text-text-secondary transition-transform duration-200 ${
+                            className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
                               isExpanded ? 'rotate-180' : ''
                             }`}
                           />
@@ -247,25 +247,25 @@ const CourseDetailPage: React.FC = () => {
 
                       {/* Module Lessons List */}
                       {isExpanded && (
-                        <div className="px-5 pb-4 pt-1 border-t border-border/60 bg-surface-secondary/30 space-y-2">
+                        <div className="px-5 pb-4 pt-1 border-t border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-white/[0.02] space-y-2">
                           {mod.lessons?.map((les, lIdx) => (
                             <div
                               key={les.id}
-                              className="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-primary border border-border text-xs"
+                              className="flex items-center justify-between py-2 px-3 rounded-lg bg-white dark:bg-[#161a24] border border-slate-200 dark:border-white/10 text-xs"
                             >
                               <div className="flex items-center gap-2.5">
-                                <span className="font-mono text-[11px] text-text-muted">
+                                <span className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
                                   {index + 1}.{lIdx + 1}
                                 </span>
-                                <span className="font-medium text-text-primary">
+                                <span className="font-medium text-slate-900 dark:text-white">
                                   {les.title}
                                 </span>
-                                <span className="px-1.5 py-0.5 rounded bg-surface-secondary text-[10px] uppercase font-mono text-text-muted border border-border">
+                                <span className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-[10px] uppercase font-mono text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10">
                                   {les.contentType}
                                 </span>
                               </div>
                               {les.estimatedMinutes && (
-                                <span className="text-text-muted font-mono text-[11px]">
+                                <span className="text-slate-400 dark:text-slate-500 font-mono text-[11px]">
                                   {les.estimatedMinutes}m
                                 </span>
                               )}
@@ -281,12 +281,12 @@ const CourseDetailPage: React.FC = () => {
 
             {/* Prerequisites */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 Prerequisites
               </h2>
               <ul className="space-y-2">
                 {course.prerequisites?.map((prereq, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-text-secondary">
+                  <li key={idx} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
                     <span>{prereq}</span>
                   </li>
@@ -297,45 +297,45 @@ const CourseDetailPage: React.FC = () => {
 
           {/* Right Column: Sticky Enrollment Box */}
           <div className="lg:col-span-4 sticky top-24">
-            <div className="bg-surface-primary rounded-xl border border-border shadow-card p-6 overflow-hidden relative">
+            <div className="bg-white dark:bg-[#121620] rounded-xl border border-slate-200 dark:border-white/10 shadow-card p-6 overflow-hidden relative">
               <div className="h-1.5 absolute top-0 inset-x-0" style={{ backgroundColor: domainColor }} />
 
               <div className="mb-6">
-                <span className="text-xs uppercase tracking-wider font-semibold text-text-muted">
+                <span className="text-xs uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">
                   Course Track
                 </span>
-                <h3 className="font-bold text-xl text-text-primary mt-1 mb-2">
+                <h3 className="font-bold text-xl text-slate-900 dark:text-white mt-1 mb-2">
                   {course.title}
                 </h3>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs px-2.5 py-0.5 rounded bg-status-successLight text-status-success font-medium">
+                  <span className="text-xs px-2.5 py-0.5 rounded bg-emerald-500/10 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-medium">
                     Free Access
                   </span>
-                  <span className="text-xs text-text-secondary">Self-paced with evaluation</span>
+                  <span className="text-xs text-slate-600 dark:text-slate-400">Self-paced with evaluation</span>
                 </div>
               </div>
 
               {/* Course specs list */}
-              <div className="space-y-3 pb-6 border-b border-border text-sm">
+              <div className="space-y-3 pb-6 border-b border-slate-200 dark:border-white/10 text-sm">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-secondary">Difficulty:</span>
-                  <span className="font-medium text-text-primary">{course.difficulty}</span>
+                  <span className="text-slate-500 dark:text-slate-400">Difficulty:</span>
+                  <span className="font-medium text-slate-900 dark:text-white">{course.difficulty}</span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-secondary">Estimated Duration:</span>
-                  <span className="font-medium text-text-primary">{course.durationWeeks} weeks</span>
+                  <span className="text-slate-500 dark:text-slate-400">Estimated Duration:</span>
+                  <span className="font-medium text-slate-900 dark:text-white">{course.durationWeeks} weeks</span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-secondary">Commitment:</span>
-                  <span className="font-medium text-text-primary">~{course.estimatedHours} hours</span>
+                  <span className="text-slate-500 dark:text-slate-400">Commitment:</span>
+                  <span className="font-medium text-slate-900 dark:text-white">~{course.estimatedHours} hours</span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-secondary">Curriculum:</span>
-                  <span className="font-medium text-text-primary">{course.modules?.length ?? 0} modules</span>
+                  <span className="text-slate-500 dark:text-slate-400">Curriculum:</span>
+                  <span className="font-medium text-slate-900 dark:text-white">{course.modules?.length ?? 0} modules</span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-secondary">Certificate:</span>
-                  <span className="font-medium text-text-primary">Upon verified project</span>
+                  <span className="text-slate-500 dark:text-slate-400">Certificate:</span>
+                  <span className="font-medium text-slate-900 dark:text-white">Upon verified project</span>
                 </div>
               </div>
 

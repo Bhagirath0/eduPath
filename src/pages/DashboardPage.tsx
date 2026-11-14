@@ -44,11 +44,11 @@ interface StatCardProps {
 
 function StatCard({ label, value, icon, accent = 'text-brand-blue' }: StatCardProps) {
   return (
-    <div className="bg-surface-primary rounded-card border border-border shadow-card p-5 flex items-center gap-4">
+    <div className="bg-white dark:bg-[#121620] rounded-card border border-slate-200 dark:border-white/10 shadow-card p-5 flex items-center gap-4">
       <div className={`p-3 rounded-xl bg-brand-blue/10 dark:bg-brand-blue/20 ${accent}`}>{icon}</div>
       <div>
-        <p className="text-2xl font-bold text-text-primary">{value}</p>
-        <p className="text-sm text-text-secondary">{label}</p>
+        <p className="text-2xl font-bold text-slate-900 dark:text-white">{value}</p>
+        <p className="text-sm text-slate-600 dark:text-slate-400">{label}</p>
       </div>
     </div>
   );
@@ -102,10 +102,10 @@ export default function DashboardPage() {
       <div className="space-y-8">
         {/* Welcome header */}
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-text-primary">
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
             {getGreeting()}, {firstName} 👋
           </h1>
-          <p className="text-text-secondary mt-1">Here's your learning overview.</p>
+          <p className="text-slate-600 dark:text-slate-400 mt-1">Here's your learning overview.</p>
         </div>
 
         {/* Stats */}
@@ -138,10 +138,10 @@ export default function DashboardPage() {
 
         {/* Continue Learning */}
         {cl && (
-          <div className="bg-surface-primary rounded-card border border-border shadow-card p-6">
+          <div className="bg-white dark:bg-[#121620] rounded-card border border-slate-200 dark:border-white/10 shadow-card p-6">
             <p className="text-xs font-bold tracking-widest uppercase text-brand-blue mb-2">Continue Learning</p>
-            <h2 className="text-xl font-bold text-text-primary mb-1">{cl.courseTitle}</h2>
-            <p className="text-sm text-text-secondary mb-4">{cl.moduleTitle}</p>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{cl.courseTitle}</h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">{cl.moduleTitle}</p>
             <ProgressBar
               percent={cl.progressPercent ?? 0}
               size="md"
@@ -162,15 +162,15 @@ export default function DashboardPage() {
         {/* Recent Activity */}
         {overview?.recentActivity && overview.recentActivity.length > 0 && (
           <div>
-            <h2 className="text-lg font-bold text-text-primary mb-4">Recent Activity</h2>
-            <div className="bg-surface-primary rounded-card border border-border shadow-card divide-y divide-border">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Recent Activity</h2>
+            <div className="bg-white dark:bg-[#121620] rounded-card border border-slate-200 dark:border-white/10 shadow-card divide-y divide-slate-200 dark:divide-white/10">
               {overview.recentActivity.map((activity, i) => (
                 <div key={i} className="flex items-center gap-3 px-5 py-3.5">
-                  <div className="p-2 rounded-lg bg-surface-secondary">
+                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-[#161a24]">
                     {activityIcon(activity.type)}
                   </div>
-                  <p className="flex-1 text-sm text-text-primary">{activity.title || activity.text}</p>
-                  <span className="text-xs text-text-muted whitespace-nowrap">{timeAgo(activity.timestamp)}</span>
+                  <p className="flex-1 text-sm text-slate-800 dark:text-slate-200">{activity.title || activity.text}</p>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">{timeAgo(activity.timestamp)}</span>
                 </div>
               ))}
             </div>
@@ -179,7 +179,7 @@ export default function DashboardPage() {
 
         {/* Quick Actions */}
         <div>
-          <h2 className="text-lg font-bold text-text-primary mb-4">Quick Actions</h2>
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Quick Actions</h2>
           <div className="flex flex-wrap gap-3">
             <Link to="/courses">
               <Button variant="secondary" leftIcon={<BookOpen className="w-4 h-4" />}>

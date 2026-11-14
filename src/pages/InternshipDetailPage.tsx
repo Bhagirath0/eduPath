@@ -85,7 +85,7 @@ const InternshipDetailPage: React.FC = () => {
   return (
     <PublicLayout>
       {/* Header */}
-      <div className="bg-surface-secondary border-b border-border py-12 md:py-16">
+      <div className="bg-slate-50 dark:bg-[#12151d] border-b border-slate-200 dark:border-white/10 py-12 md:py-16 transition-colors duration-200">
         <div className="container-content">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="badge badge-blue">{internship.domain}</span>
@@ -94,15 +94,15 @@ const InternshipDetailPage: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-4 max-w-4xl">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 max-w-4xl">
             {internship.title}
           </h1>
 
-          <p className="text-text-secondary text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
+          <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
             {internship.description}
           </p>
 
-          <div className="flex flex-wrap items-center gap-6 text-sm text-text-secondary">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-brand-blue" />
               <span>{internship.duration} Structured Duration</span>
@@ -126,24 +126,24 @@ const InternshipDetailPage: React.FC = () => {
           <div className="lg:col-span-8 space-y-12">
             {/* Overview */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 Program Overview
               </h2>
-              <p className="text-text-secondary leading-relaxed text-base">
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
                 {internship.overview}
               </p>
             </section>
 
             {/* Learning Objectives */}
-            <section className="bg-surface-secondary rounded-xl border border-border p-6 sm:p-8">
-              <h2 className="text-xl font-bold text-text-primary mb-4">
+            <section className="bg-slate-50 dark:bg-[#161a24] rounded-xl border border-slate-200 dark:border-white/10 p-6 sm:p-8">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
                 What You Will Achieve & Deliver
               </h2>
               <div className="space-y-3">
                 {internship.learningObjectives.map((obj, i) => (
                   <div key={i} className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
-                    <span className="text-sm text-text-primary">{obj}</span>
+                    <span className="text-sm text-slate-800 dark:text-slate-200">{obj}</span>
                   </div>
                 ))}
               </div>
@@ -151,25 +151,25 @@ const InternshipDetailPage: React.FC = () => {
 
             {/* Weekly Structure */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 Weekly Milestone Structure
               </h2>
               <div className="space-y-4">
                 {internship.weeklyStructure.map((week) => (
                   <div
                     key={week.week}
-                    className="p-5 rounded-xl border border-border bg-surface-primary shadow-card"
+                    className="p-5 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#121620] shadow-card"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <span className="px-2.5 py-1 rounded-md bg-brand-blue/15 text-brand-blue dark:text-blue-400 text-xs font-mono font-semibold border border-brand-blue/30">
                         Week {week.week}
                       </span>
-                      <h3 className="font-bold text-base text-text-primary">{week.title}</h3>
+                      <h3 className="font-bold text-base text-slate-900 dark:text-white">{week.title}</h3>
                     </div>
                     <ul className="space-y-2 pl-2">
                       {week.tasks.map((task, tIdx) => (
-                        <li key={tIdx} className="flex items-start gap-2 text-xs text-text-secondary">
-                          <CheckSquare className="w-3.5 h-3.5 text-text-muted shrink-0 mt-0.5" />
+                        <li key={tIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400">
+                          <CheckSquare className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 shrink-0 mt-0.5" />
                           <span>{task}</span>
                         </li>
                       ))}
@@ -181,17 +181,17 @@ const InternshipDetailPage: React.FC = () => {
 
             {/* Evaluation Criteria */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 Evaluation Criteria
               </h2>
-              <p className="text-sm text-text-secondary mb-4 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
                 Certificates are issued only to interns who satisfy our objective evaluation benchmarks:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {internship.evaluationCriteria.map((crit, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-lg bg-surface-secondary border border-border text-xs text-text-primary flex items-start gap-2.5"
+                    className="p-3.5 rounded-lg bg-slate-50 dark:bg-[#161a24] border border-slate-200 dark:border-white/10 text-xs text-slate-800 dark:text-slate-200 flex items-start gap-2.5"
                   >
                     <ShieldCheck className="w-4 h-4 text-status-success shrink-0 mt-0.5" />
                     <span className="font-medium">{crit}</span>
@@ -202,13 +202,13 @@ const InternshipDetailPage: React.FC = () => {
 
             {/* Application Process */}
             <section>
-              <h2 className="text-xl font-bold text-text-primary mb-4 pb-2 border-b border-border">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-white/10">
                 Application & Onboarding Process
               </h2>
               <div className="space-y-3">
                 {internship.applicationProcess.map((step, idx) => (
-                  <div key={idx} className="flex items-center gap-3 text-sm text-text-secondary">
-                    <span className="w-6 h-6 rounded-full bg-surface-secondary border border-border text-xs font-mono font-semibold flex items-center justify-center shrink-0">
+                  <div key={idx} className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                    <span className="w-6 h-6 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-mono font-semibold flex items-center justify-center shrink-0">
                       {idx + 1}
                     </span>
                     <span>{step}</span>
