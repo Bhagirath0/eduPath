@@ -71,18 +71,21 @@ const Keychain3D: React.FC<Keychain3DProps> = ({ onReady, playEntrance }) => {
     rimLight.position.set(-29, -14.8, -35);
     scene.add(rimLight);
 
-    const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.4);
     keyLight.position.set(6, 10, 12);
     scene.add(keyLight);
 
-    const softFill = new THREE.HemisphereLight(0xffffff, 0xc8d4e4, 0.9);
+    const softFill = new THREE.HemisphereLight(0xffffff, 0xc8d4e4, 1.1);
     scene.add(softFill);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+    scene.add(ambientLight);
 
     // ── Materials ─────────────────────────────────────────────────────────
     const steelMat = new THREE.MeshStandardMaterial({
-      color: 0xa9afba,
-      metalness: 0.95,
-      roughness: 0.2,
+      color: 0xc4cbd5,
+      metalness: 0.28,
+      roughness: 0.28,
     });
 
     const glossyCobaltMat = new THREE.MeshPhysicalMaterial({
@@ -115,9 +118,9 @@ const Keychain3D: React.FC<Keychain3DProps> = ({ onReady, playEntrance }) => {
     });
 
     const chromeKeyMat = new THREE.MeshStandardMaterial({
-      color: 0xe4e6ea,
-      metalness: 0.98,
-      roughness: 0.16,
+      color: 0xdde4ec,
+      metalness: 0.35,
+      roughness: 0.22,
     });
 
     // ── Main Keyring (torus radius 0.5, tube 0.04 at (0, 3.2, 0)) ─────────

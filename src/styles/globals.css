@@ -26,20 +26,20 @@
   --card-bg: #121620;
 }
 
-html.light, body.light, [data-theme="light"] {
+html.light, body.light, [data-theme="light"], :root:not(.dark) {
   --ink: #111418;
   --bg-page: #f8fafc;
-  --pill-bg: rgba(255, 255, 255, 0.88);
-  --pill-border: rgba(0, 0, 0, 0.08);
-  --pill-text: #475569;
+  --pill-bg: rgba(255, 255, 255, 0.92);
+  --pill-border: rgba(0, 0, 0, 0.1);
+  --pill-text: #334155;
   --pill-text-hover: #0f172a;
-  --timeline-panel: #e2e8f0;
+  --timeline-panel: #f1f5f9;
 
   --surface-primary: #ffffff;
   --surface-secondary: #f1f5f9;
   --surface-tertiary: #e2e8f0;
   --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   --text-inverse: #ffffff;
   --border-color: rgba(0, 0, 0, 0.09);

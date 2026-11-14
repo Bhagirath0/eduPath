@@ -258,14 +258,13 @@ const GlazeTimelineStatement: React.FC = () => {
       >
         <div
           ref={timelineBoxRef}
-          className="relative w-full shadow-2xl select-none"
+          className="relative w-full shadow-2xl select-none bg-slate-100 dark:bg-[#12151b] border border-slate-200 dark:border-white/10"
           style={{
             maxWidth: 'calc(1400 * var(--u))',
             aspectRatio: '1372 / 500',
-            backgroundColor: '#12151b',
             borderRadius: 'max(16px, calc(44 * var(--u)))',
             boxShadow:
-              '0 calc(40 * var(--u)) calc(70 * var(--u)) rgba(40, 60, 110, 0.22), 0 calc(6 * var(--u)) calc(14 * var(--u)) rgba(20, 30, 60, 0.18)',
+              '0 calc(40 * var(--u)) calc(70 * var(--u)) rgba(40, 60, 110, 0.12), 0 calc(6 * var(--u)) calc(14 * var(--u)) rgba(20, 30, 60, 0.08)',
           }}
         >
           {/* Pause / Play Button */}
@@ -273,14 +272,13 @@ const GlazeTimelineStatement: React.FC = () => {
             type="button"
             onClick={() => setIsPlaying(!isPlaying)}
             aria-label={isPlaying ? 'Pause progress simulation' : 'Resume progress simulation'}
-            className="absolute z-20 flex items-center justify-center text-white transition-colors hover:bg-[#363c48]"
+            className="absolute z-20 flex items-center justify-center text-slate-700 dark:text-white transition-colors bg-slate-200 hover:bg-slate-300 dark:bg-[#2a2f39] dark:hover:bg-[#363c48]"
             style={{
               left: '1.7%',
               top: '4.4%',
               width: 'max(24px, calc(40 * var(--u)))',
               height: 'max(24px, calc(40 * var(--u)))',
               borderRadius: 'max(6px, calc(11 * var(--u)))',
-              backgroundColor: '#2a2f39',
             }}
           >
             {isPlaying ? (
@@ -292,7 +290,7 @@ const GlazeTimelineStatement: React.FC = () => {
 
           {/* Milestone Ruler (Week 1 to Week 6) */}
           <div
-            className="absolute flex items-center justify-between text-[#e9edf3] font-semibold"
+            className="absolute flex items-center justify-between text-slate-800 dark:text-[#e9edf3] font-semibold"
             style={{
               left: '8%',
               right: '2.4%',
@@ -306,8 +304,8 @@ const GlazeTimelineStatement: React.FC = () => {
                 <span>{week}</span>
                 {idx < 5 && (
                   <div className="absolute left-full w-full flex justify-around -top-1 opacity-25">
-                    <span className="w-px h-2 bg-white" />
-                    <span className="w-px h-2 bg-white" />
+                    <span className="w-px h-2 bg-slate-600 dark:bg-white" />
+                    <span className="w-px h-2 bg-slate-600 dark:bg-white" />
                   </div>
                 )}
               </div>
@@ -316,14 +314,14 @@ const GlazeTimelineStatement: React.FC = () => {
 
           {/* Track Labels (T1: Core, T2: Capstone) */}
           <span
-            className="absolute font-mono font-semibold text-[#8d97a8] tracking-widest text-[11px]"
+            className="absolute font-mono font-semibold text-slate-500 dark:text-[#8d97a8] tracking-widest text-[11px]"
             style={{ left: '2.5%', top: '32.5%' }}
             title="Track 1: Foundational Coursework"
           >
             T1
           </span>
           <span
-            className="absolute font-mono font-semibold text-[#8d97a8] tracking-widest text-[11px]"
+            className="absolute font-mono font-semibold text-slate-500 dark:text-[#8d97a8] tracking-widest text-[11px]"
             style={{ left: '2.5%', top: '72.5%' }}
             title="Track 2: Applied Project & Internship"
           >
@@ -332,27 +330,25 @@ const GlazeTimelineStatement: React.FC = () => {
 
           {/* Track Lane T1 */}
           <div
-            className="absolute"
+            className="absolute bg-slate-200/60 dark:bg-white/5"
             style={{
               left: '8%',
               right: '2.4%',
               top: '16%',
               height: '33%',
               borderRadius: 'max(8px, calc(14 * var(--u)))',
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
             }}
           />
 
           {/* Track Lane T2 */}
           <div
-            className="absolute"
+            className="absolute bg-slate-200/60 dark:bg-white/5"
             style={{
               left: '8%',
               right: '2.4%',
               top: '56%',
               height: '33%',
               borderRadius: 'max(8px, calc(14 * var(--u)))',
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
             }}
           />
 
