@@ -45,11 +45,12 @@ const GlazeHeader: React.FC = () => {
           aria-label="EduPath home"
         >
           <span
-            className="font-kaushan text-slate-900 dark:text-white leading-none transition-transform group-hover:scale-105"
+            className="font-kaushan leading-none transition-transform group-hover:scale-105"
             style={{
               fontSize: 'max(20px, calc(31 * var(--u)))',
               transform: 'skewX(-6deg)',
               letterSpacing: '-0.01em',
+              color: 'var(--text-primary)',
             }}
           >
             EduPath
@@ -85,9 +86,10 @@ const GlazeHeader: React.FC = () => {
             <NavLink
               key={item.to}
               to={item.to}
-              className="font-inter-tight text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors text-sm whitespace-nowrap"
+              className="font-inter-tight transition-colors text-sm whitespace-nowrap opacity-85 hover:opacity-100"
               style={{
                 fontSize: 'calc(17 * var(--u))',
+                color: 'var(--text-secondary)',
               }}
             >
               {item.label}
@@ -99,10 +101,11 @@ const GlazeHeader: React.FC = () => {
         <button
           type="button"
           aria-label="More navigation options"
-          className="flex items-center justify-center shrink-0 text-text-secondary hover:text-text-primary transition-colors ml-auto"
+          className="flex items-center justify-center shrink-0 transition-colors ml-auto opacity-75 hover:opacity-100"
           style={{
             width: 'max(22px, calc(30 * var(--u)))',
             height: 'max(22px, calc(30 * var(--u)))',
+            color: 'var(--text-secondary)',
           }}
         >
           <svg
@@ -138,8 +141,11 @@ const GlazeHeader: React.FC = () => {
 
         <Link
           to="/dashboard"
-          className="font-inter-tight text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition-colors font-medium"
-          style={{ fontSize: 'max(13px, calc(17 * var(--u)))' }}
+          className="font-inter-tight transition-colors font-medium opacity-90 hover:opacity-100"
+          style={{
+            fontSize: 'max(13px, calc(17 * var(--u)))',
+            color: 'var(--text-primary)',
+          }}
         >
           Login
         </Link>

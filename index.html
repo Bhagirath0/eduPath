@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Learn practical technical skills through structured courses, hands-on assignments, and project-based internships." />
     <title>EduPath — Learn Skills. Build Projects. Move Forward.</title>
-    <!-- Prevent flash of light mode -->
+    <!-- Prevent flash of wrong theme -->
     <script>
       (function() {
         var theme = localStorage.getItem('edupath_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
         if (theme === 'dark') {
           document.documentElement.classList.add('dark');
           document.documentElement.classList.remove('light');

@@ -21,18 +21,29 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
     if (theme === 'dark') {
       root.classList.add('dark');
       root.classList.remove('light');
+      body.classList.add('dark');
+      body.classList.remove('light');
       root.setAttribute('data-theme', 'dark');
+      body.setAttribute('data-theme', 'dark');
       root.style.colorScheme = 'dark';
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
+      body.classList.remove('dark');
+      body.classList.add('light');
       root.setAttribute('data-theme', 'light');
+      body.setAttribute('data-theme', 'light');
       root.style.colorScheme = 'light';
     }
-    localStorage.setItem('edupath_theme', theme);
+    try {
+      localStorage.setItem('edupath_theme', theme);
+    } catch (e) {
+      console.warn('localStorage not accessible:', e);
+    }
   }, [theme]);
 
   const toggleTheme = () => {

@@ -71,7 +71,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
       >
         {/* Left: Headline in mask */}
         <div className="overflow-hidden pb-[0.08em] -mb-[0.08em]">
-          <h1 className="leading-none tracking-tight text-[#111418] dark:text-white font-inter-tight font-medium">
+          <h1
+            className="leading-none tracking-tight font-inter-tight font-medium"
+            style={{ color: 'var(--text-primary)' }}
+          >
             <span
               ref={headlineInnerRef}
               className="inline-block transform"
@@ -80,6 +83,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
                 lineHeight: 0.94,
                 letterSpacing: '-0.03em',
                 willChange: 'transform',
+                color: 'var(--text-primary)',
               }}
             >
               LEARN SKILLS.
@@ -98,11 +102,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
         >
           <div
             ref={subtitleRef}
-            className="font-inter-tight text-slate-600 dark:text-[#94a3b8] leading-tight"
+            className="font-inter-tight leading-tight"
             style={{
               fontSize: 'max(16px, calc(23.5 * var(--u)))',
               letterSpacing: '0.01em',
               lineHeight: 1.15,
+              color: 'var(--text-secondary)',
             }}
           >
             Practical technical courses, hands-on assignments,
@@ -135,13 +140,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ on3dReady, playEntrance }) =>
 
             <Link
               to="/courses"
-              className="inline-flex items-center justify-center font-inter-tight font-medium text-[#111418] dark:text-white border border-black/15 dark:border-white/20 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 backdrop-blur-sm transition-all duration-300 shadow-sm"
+              className="inline-flex items-center justify-center font-inter-tight font-medium border backdrop-blur-sm transition-all duration-300 shadow-sm hover:opacity-90"
               style={{
                 height: 'max(44px, calc(48 * var(--u)))',
                 paddingLeft: 'max(18px, calc(24 * var(--u)))',
                 paddingRight: 'max(18px, calc(24 * var(--u)))',
                 borderRadius: 'max(11px, calc(13 * var(--u)))',
                 fontSize: 'max(14px, calc(16 * var(--u)))',
+                color: 'var(--text-primary)',
+                backgroundColor: 'var(--pill-bg)',
+                borderColor: 'var(--pill-border)',
               }}
             >
               Browse Courses
